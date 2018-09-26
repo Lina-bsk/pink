@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Lina Zhabska](https://up.htmlacademy.ru/adaptive/15/user/660549).
-* Наставник: Ярослав Шевцов.
+* Наставник: [Ярослав Шевцов] (https://htmlacademy.ru/profile/redx).
 
 ---
 
