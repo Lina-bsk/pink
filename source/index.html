@@ -7,114 +7,113 @@
 </head>
 
 <body>
-  <header class="header">
-    <a class="header__logo">
-        <img class="header__logo-image" src="img/logo.svg" width="75" height="22" alt="Pink">
-      </a>
+  <header class="header header--index">
+    <a class="logo">
+      <img class="logo__image" src="img/logo.svg" width="75" height="22" alt="Pink">
+    </a>
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button">Открыть меню</button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list nav-list">
-          <li class="nav-list__item nav-list__item--active"><a>Главная</a>
-          </li>
-          <li class="nav-list__item"><a href="photo.html">Фотографии</a>
-          </li>
-          <li class="nav-list__item"><a href="form.html">Конкурс</a>
-          </li>
-          <li class="nav-list__item"><a href="https://htmlacademy.ru/intensive/adaptive">HTML ACADEMY</a>
-          </li>
-        </ul>
-      </div>
+      <ul class="main-nav__list">
+        <li class="main-nav__list-item main-nav__list-item--active"><a>Главная</a></li>
+        <li class="main-nav__list-item"><a href="photo.html">Фотографии</a></li>
+        <li class="main-nav__list-item"><a href="form.html">Конкурс</a></li>
+        <li class="main-nav__list-item"><a href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML ACADEMY</a></li>
+      </ul>
     </nav>
+    <h1 class="visually-hidden">Приложение Пинк - раскрась серые будни в розовый цвет</h1>
+    <section class="download-app">
+      <h2 class="visually-hidden">Скачать приложение Пинк</h2>
+      <a class="download-app__button" href="https://www.apple.com/lae/itunes/" target="_blank">Скачать приложение</a>
+      <div class="download-app__links">
+        <a class="download-app__link" href="https://www.apple.com/lae/ios/app-store/" target="_blank">Apple</a>
+        <a class="download-app__link" href="https://www.androidapps.com/" target="_blank">Android</a>
+        <a class="download-app__link" href="https://www.microsoft.com/en-us/store/appsvnext/windows" target="_blank">Windows</a>
+      </div>
+      <p class="download-app__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+    </section>
   </header>
   <main class="main-page">
-    <h1 class="visually-hidden">Приложение Пинк - раскрась серые будни в розовый цвет</h1>
-    <div class="intro">
-      <img class="intro__image" src="img/phone" width="320" height="314" alt="phone in hand">
-      <section class="intro__app download-app">
-        <h2 class="visually-hidden">Скачать приложение</h2>
-        <a class="download-app__button" href="https://www.apple.com/lae/itunes/">Скачать приложение</a>
-        <ul class="download-app__list">
-          <li class="download-app__item"><a href="https://www.apple.com/lae/ios/app-store/">Apple</a></li>
-          <li class="download-app__item"><a href="https://www.androidapps.com/">Android</a></li>
-          <li class="download-app__item"><a href="https://www.microsoft.com/en-us/store/appsvnext/windows">Windows</a></li>
-        </ul>
-        <p class="download-app__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
-      </section>
+    <h3 class="subtitle">Устали от серости мегаполиса?</h3>
+    <h3 class="subtitle">Нам есть, что вам предложить!</h3>
+    <div class="advantages">
+      <dl class="advantages__list">
+        <dt class="advantages__term">Поднимает настроение</dt>
+        <dd class="advantages__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</dd>
+        <dt class="advantages__term">Меняет мир вокруг</dt>
+        <dd class="advantages__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</dd>
+        <dt class="advantages__term">Заводит новых друзей</dt>
+        <dd class="advantages__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</dd>
+      </dl>
     </div>
-    <div class="about-app">
-      <div class="about-app__question">
-        <p class="about-app__info">Устали от серости мегаполиса?</p>
-        <p class="about-app__info">Нам есть, что вам предложить!</p>
-      </div>
-      <section class="about-app__pros advantages">
-        <h2 class="visually-hidden">Описание приложения</h2>
-        <ul class="advantages__list">
-          <li class="advantages__item"><span class="advantages__title">Поднимает настроение</span>Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</li>
-          <li class="advantages__item"><span class="advantages__title">Меняет мир вокруг</span>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</li>
-          <li class="advantages__item"><span class="advantages__title">Заводит новых друзей</span>Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</li>
-        </ul>
-      </section>
-      <img src="img/phone-smile.png" width="" height="" alt="">
-    </div>
-    <section class="reviews">
-      <div class="reviews__wrapper slider">
-        <h2 class="visually-hidden">Отзывы о приложении</h2>
-        <blockquote class="reviews__item slider__item">
-          <cite class="reviews__author">Николай Петров</cite>
-          <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-        </blockquote>
-        <div class="reviews__toggles slider__toggles">
-          <button class="slider__toggle slider__toggle--current" type="button">1</button>
-          <button class="slider__toggle" type="button">2</button>
-          <button class="slider__toggle" type="button">3</button>
-        </div>
+    <section class="reviews slider">
+      <h3 class="visually-hidden">Отзывы о приложении</h3>
+      <input class="visually-hidden" id="reviews-1" type="radio" name="toggle" checked>
+      <input class="visually-hidden" id="reviews-2" type="radio" name="toggle">
+      <input class="visually-hidden" id="reviews-3" type="radio" name="toggle">
+      <blockquote class="reviews__item">
+        <cite class="reviews__author">Николай Петров</cite>
+        <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+      </blockquote>
+      <blockquote class="reviews__item">
+        <cite class="reviews__author">Николай Петров</cite>
+        <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+      </blockquote>
+      <blockquote class="reviews__item">
+        <cite class="reviews__author">Николай Петров</cite>
+        <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+      </blockquote>
+      <div class="reviews__toggles slider__toggles">
+        <label class="slider__toggle slider__toggle--first" for="reviews-1">1</label>
+        <label class="slider__toggle slider__toggle--second" for="reviews-2">2</label>
+        <label class="slider__toggle slider__toggle--third" for="reviews-3">3</label>
       </div>
     </section>
-    <section class="tariff">
-      <div class="tariff__wrapper slider">
-        <h2 class="visually-hidden">Стоимость приложения</h2>
-        <table class="tariff__table slider__item">
-          <tr>
-            <th class="tariff__plan" colspan="2"><span class="tariff__name">Стандарт</span> 3,99 USD</th>
-          </tr>
-          <tr>
-            <td class="tariff__field">Розовый фильтр</td>
-            <td class="tariff__value">Есть</td>
-          </tr>
-          <tr>
-            <td class="tariff__field">Смайлики</td>
-            <td class="tariff__value">Есть</td>
-          </tr>
-          <tr>
-            <td class="tariff__field">Комментарии</td>
-            <td class="tariff__value">Нету</td>
-          </tr>
-        </table>
-        <div class="tariff__toggles slider__toggles">
-          <button class="slider__toggle" type="button">1</button>
-          <button class="slider__toggle slider__toggle--current" type="button">2</button>
-          <button class="slider__toggle" type="button">3</button>
-        </div>
+    <section class="tariff slider">
+      <h3 class="visually-hidden">Стоимость приложения</h3>
+      <input class="visually-hidden" id="tariff-1" type="radio" name="toggle" checked>
+      <input class="visually-hidden" id="tariff-2" type="radio" name="toggle">
+      <input class="visually-hidden" id="tariff-3" type="radio" name="toggle">
+      <table class="tariff__table">
+        <tr>
+          <th class="tariff__plan"><span class="tariff__name">База</span> 1,99 USD</th>
+          <th class="tariff__plan tariff__plan--hit"><span class="tariff__name">Стандарт</span> 3,99 USD</th>
+          <th class="tariff__plan"><span class="tariff__name">Анлим</span> 9,99 USD</th>
+        </tr>
+        <tr>
+          <td class="tariff__field tariff__field--enabled">Розовый фильтр</td>
+          <td class="tariff__field tariff__field--enabled">Розовый фильтр</td>
+          <td class="tariff__field tariff__field--enabled">Розовый фильтр</td>
+        </tr>
+        <tr>
+          <td class="tariff__field tariff__field--disabled">Смайлики</td>
+          <td class="tariff__field tariff__field--enabled">Смайлики</td>
+          <td class="tariff__field tariff__field--enabled">Смайлики</td>
+        </tr>
+        <tr>
+          <td class="tariff__field tariff__field--disabled">Комментарии</td>
+          <td class="tariff__field tariff__field--disabled">Комментарии</td>
+          <td class="tariff__field tariff__field--enabled">Комментарии</td>
+        </tr>
+      </table>
+      <div class="tariff__toggles slider__toggles">
+        <label class="slider__toggle slider__toggle--first" for="tariff-1">1</label>
+        <label class="slider__toggle slider__toggle--second" for="tariff-2">2</label>
+        <label class="slider__toggle slider__toggle--third" for="tariff-3">3</label>
       </div>
     </section>
   </main>
   <footer class="footer">
-    <div class="footer__wrapper">
-      <p class="footer__question">Остались вопросы? Свяжитесь с нами!</p>
-      <ul class="footer__contacts contacts">
-        <li class="contacts__item">Звоните:
-          <p class="contacts__info">+7 (812) 555-66-66</p>
-        </li>
-        <li class="contacts__item">Пишите:
-          <p class="contacts__info">mail@htmlacademy.ru</p>
-        </li>
-        <li class="contacts__item">Приезжайте в гости:
-          <p class="contacts__info">ул. Большая Конюшенная, 19/8</p>
-        </li>
-      </ul>
-      <div class="footer__map"></div>
-    </div>
+    <h4 class="subtitle">Остались вопросы?</h4>
+    <h4 class="subtitle">Свяжитесь с нами!</h4>
+    <dl class="footer__contacts">
+      <dt class="footer__item">Звоните:</dt>
+      <dd class="footer__info">+7 (812) 555-66-66</dd>
+      <dt class="footer__item">Пишите:</dt>
+      <dd class="footer__info">mail@htmlacademy.ru</dd>
+      <dt class="footer__item">Приезжайте в гости:</dt>
+      <dd class="footer__info">ул. Большая Конюшенная, 19/8</dd>
+    </dl>
+    <div class="footer__map"></div>
   </footer>
 </body>
 
