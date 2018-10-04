@@ -1,0 +1,25 @@
+.main-nav__list {
+  list-style: none;
+}
+
+.main-nav__link {
+  .font-info(18px; 32px; 700);
+  color: @white;
+  .transform ();
+
+  &:hover {
+    color: @main-color;
+  }
+
+  &:active {
+    color: @main-color;
+    opacity: 0.3;
+  }
+}
+
+.main-nav__link--active {
+  &:hover,
+  &:active {
+    color: @white;
+  }
+}
