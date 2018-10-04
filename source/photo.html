@@ -9,19 +9,21 @@
 
 <body>
   <header class="header">
-    <a href="index.html" class="logo">
+    <div class="header__top">
+      <a href="index.html" class="logo">
       <img class="logo__image" src="img/logo.svg" width="75" height="22" alt="Pink">
     </a>
-    <nav class="main-nav">
-      <label class="main-nav__toggle" for="menu">Mеню</label>
-      <input class="visually-hidden" id="menu" type="checkbox" name="nav-menu">
-      <ul class="main-nav__list">
-        <li class="main-nav__list-item"><a href="index.html">Главная</a></li>
-        <li class="main-nav__list-item main-nav__list-item--active"><a>Фотографии</a></li>
-        <li class="main-nav__list-item"><a href="form.html">Конкурс</a></li>
-        <li class="main-nav__list-item"><a href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML ACADEMY</a></li>
-      </ul>
-    </nav>
+      <nav class="main-nav">
+        <label class="main-nav__toggle" for="menu">Mеню</label>
+        <input class="visually-hidden" id="menu" type="checkbox" name="nav-menu">
+        <ul class="main-nav__list">
+          <li class="main-nav__list-item"><a class="main-nav__link" href="index.html">Главная</a></li>
+          <li class="main-nav__list-item"><a class="main-nav__link main-nav__link--active">Фотографии</a></li>
+          <li class="main-nav__list-item"><a class="main-nav__link" href="form.html">Конкурс</a></li>
+          <li class="main-nav__list-item"><a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML ACADEMY</a></li>
+        </ul>
+      </nav>
+    </div>
     <h1 class="header__title">Фотографии пользователей</h1>
   </header>
   <main class="main">
@@ -80,7 +82,7 @@
       <input type="range" name="value">
       <input type="range" name="value">
       <button class="editor__button editor__button--submit" type="submit">Запостить</button>
-      <button class="editor__button" type="reset">Отмена</button>
+      <button class="editor__button editor__button--reset" type="reset">Отмена</button>
     </form>
   </main>
   <footer class="footer">
