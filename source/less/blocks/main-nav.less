@@ -1,11 +1,14 @@
 .main-nav__list {
   list-style: none;
+  width: 320px;
+  margin: 0 auto;
+  display: none;
 }
 
 .main-nav__link {
-  .font-info(18px; 32px; 700);
+  font: 700 18px/32px;
   color: @white;
-  .transform ();
+  text-transform: uppercase;
 
   &:hover {
     color: @main-color;
@@ -21,5 +24,25 @@
   &:hover,
   &:active {
     color: @white;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav__list {
+    width: 660px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav__list {
+    width: 630px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 42px;
+  }
+
+  .main-nav__toggle {
+    display: none;
   }
 }

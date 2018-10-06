@@ -1,4 +1,52 @@
+.advantages {
+  padding-top: 20px;
+  background: url("../../img/iphone-screen-mobile@1x.png") no-repeat 50% 470px @hue;
+}
+
+.advantages__wrap {
+  width: 280px;
+  margin: 0 auto;
+}
+
+.advantages__list {
+  text-align: center;
+  list-style: none;
+  padding: 0;
+
+  .advantages__item:last-child {
+    padding-bottom: 320px;
+  }
+}
+
 .advantages__term {
-  .font-info(18px; 24px; 700);
+  font: 700 18px/24px;
   color: @black;
+}
+
+@media (min-width: @tablet-width) {
+  .advantages__wrap {
+    width: 620px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .advantages__list {
+    display: flex;
+    flex-direction: column;
+    width: 310px;
+    text-align: left;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages__wrap {
+    width: 940px;
+    margin: 0 auto;
+  }
+
+  .advantages__list {
+    width: auto;
+    flex-direction: row;
+  }
 }
