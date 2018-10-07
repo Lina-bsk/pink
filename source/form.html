@@ -4,22 +4,26 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Пинк</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
   <header class="header">
+    <div class="header__top">
     <a class="logo" href="index.html">
       <img class="logo__image" src="img/logo.svg" width="75" height="22" alt="Pink">
     </a>
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">Открыть меню</button>
+      <label class="main-nav__toggle" for="menu">Mеню</label>
+      <input class="visually-hidden" id="menu" type="checkbox" name="nav-menu">
       <ul class="main-nav__list">
-        <li class="main-nav__list-item"><a href="index.html">Главная</a></li>
-        <li class="main-nav__list-item"><a href="photo.html">Фотографии</a></li>
-        <li class="main-nav__list-item main-nav__list-item--active"><a>Конкурс</a></li>
-        <li class="main-nav__list-item"><a href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML ACADEMY</a></li>
+        <li class="main-nav__list-item"><a class="main-nav__link" href="index.html">Главная</a></li>
+        <li class="main-nav__list-item"><a class="main-nav__link" href="photo.html">Фотографии</a></li>
+        <li class="main-nav__list-item"><a class="main-nav__link main-nav__link--active">Конкурс</a></li>
+        <li class="main-nav__list-item"><a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML ACADEMY</a></li>
       </ul>
     </nav>
+  </div>
     <h1 class="header__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
   </header>
   <main class="main">
