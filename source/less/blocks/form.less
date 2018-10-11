@@ -1,9 +1,73 @@
+.form {
+  width: 280px;
+  padding: 0 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  line-height: 30px;
+
+  @media (min-width: @tablet-width) {
+    width: 620px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 960px;
+  }
+}
+
 .form__data {
   border: 0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+
+  @media (min-width: @tablet-width) {
+    flex-wrap: wrap;
+    border: 2px solid @border-color;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .form__data--name {
+    border: 0;
+  }
 }
 
 .form__label {
-  line-height: 30px;
+  font-size: 14px;
   color: @main-color;
-  .transform ();
+  text-transform: uppercase;
+  margin-bottom: 10px;
+
+  &--select {
+    line-height: 18px;
+    text-align: center;
+    padding: 0 15px;
+  }
+}
+
+.form__field {
+  border: 2px solid @border-color;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 238px;
+}
+
+.form__data-wrap {
+  background-color: @hue;
+  margin: 0 -20px;
+  padding: 35px 20px 0;
+
+  @media (min-width: @tablet-width) {
+    background-color: @white;
+  }
+}
+
+.form__select-wrap {
+  margin-bottom: 40px;
+}
+
+.form__select-item {
+  padding-left: 70px;
 }

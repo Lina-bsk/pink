@@ -1,13 +1,37 @@
+.tariff__table {
+  width: 280%;
+}
+
 .tariff__plan {
-  font: 300 24px/30px;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 300;
   color: @white;
   background-color: @top-color;
+  width: 280px;
+  text-align: center;
 
   .tariff__name {
-    font: 700 18px/30px;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 700;
+    margin: 0;
   }
 }
 
 .tariff__field {
   line-height: 30px;
+}
+
+.tariff__wrapper {
+  width: 320px;
+  overflow: hidden;
+
+  @media (min-width: @tablet-width) {
+    width: 640px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 940px;
+  }
 }
