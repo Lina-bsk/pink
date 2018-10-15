@@ -1,5 +1,32 @@
 .tariff__table {
-  width: 280%;
+  width: 350%;
+  border-collapse: collapse;
+  transform: translateX(-542px);
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    transform: none;
+    width: 620px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: auto;
+  }
+}
+
+.tariff__wrapper {
+  width: 320px;
+  overflow: hidden;
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+    padding: 0 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 940px;
+    padding: 0 130px;
+  }
 }
 
 .tariff__plan {
@@ -8,30 +35,82 @@
   font-weight: 300;
   color: @white;
   background-color: @top-color;
-  width: 280px;
   text-align: center;
+  padding: 20px 0;
 
-  .tariff__name {
-    font-size: 18px;
-    line-height: 30px;
-    font-weight: 700;
-    margin: 0;
+  @media (min-width: @tablet-width) {
+    padding: 10px 0;
   }
+}
+
+.tariff__name {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
 }
 
 .tariff__field {
   line-height: 30px;
-}
-
-.tariff__wrapper {
-  width: 320px;
-  overflow: hidden;
+  border: 2px solid @border-color;
+  padding: 22px 0 22px 22px;
+  position: relative;
+  width: 280px;
 
   @media (min-width: @tablet-width) {
-    width: 640px;
+    padding: 15px;
+    text-transform: none;
+    width: 150px;
+
+    &:not(:first-child) {
+    font-size: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+    width: 235px;
+  }
+}
+
+.tariff__field--enabled:before {
+  content: "";
+  position: absolute;
+  width: 31px;
+  height: 21px;
+  background: url(../../img/yes-green.svg) no-repeat;
+  top: 25px;
+  right: 2px;
+
+  @media (min-width: @tablet-width) {
+    right: 48px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 940px;
+    right: 85px;
   }
+}
+
+.tariff__field--disabled:before {
+  content: "";
+  position: absolute;
+  width: 27px;
+  height: 26px;
+  background: url(../../img/no-red.svg) no-repeat;
+  top: 25px;
+  right: 10px;
+
+  @media (min-width: @tablet-width) {
+    top: 20px;
+    right: 58px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 95px;
+    top: 17px;
+  }
+}
+
+.tariff__toggles {
+  margin-top: 35px;
 }

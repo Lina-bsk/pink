@@ -11,22 +11,18 @@
 
 <body>
   <header class="header">
-    <div class="header__top">
-      <div class="header__top-wrap">
-        <a class="logo" href="index.html">
-          <img class="logo__image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Pink">
-        </a>
-        <nav class="main-nav">
-          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Mеню</span></button>
-          <ul class="main-nav__list">
-            <li class="main-nav__list-item"><a class="main-nav__link" href="index.html">Главная</a></li>
-            <li class="main-nav__list-item"><a class="main-nav__link" href="photo.html">Фотографии</a></li>
-            <li class="main-nav__list-item"><a class="main-nav__link main-nav__link--active">Конкурс</a></li>
-            <li class="main-nav__list-item"><a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML ACADEMY</a></li>
-          </ul>
-        </nav>
+    <nav class="header__nav header__nav--closed">
+      <div class="header__top">
+        <a class="logo" href="#"><img src="./img/logo-pink-white-mobile.svg"></a>
+        <button class="header__nav-toggle">закрыть</button>
       </div>
-    </div>
+      <ul class="main-nav">
+        <li class="main-nav__list-item"><a class="main-nav__link" href="index.html">Главная</a></li>
+        <li class="main-nav__list-item"><a class="main-nav__link" href="photo.html">Фотографии</a></li>
+        <li class="main-nav__list-item"><a class="main-nav__link main-nav__link--active" href="form.html">Конкурс</a></li>
+        <li class="main-nav__list-item"><a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML ACADEMY</a></li>
+      </ul>
+    </nav>
     <h1 class="header__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
   </header>
   <main class="main">
