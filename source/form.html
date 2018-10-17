@@ -28,17 +28,25 @@
   <main class="main">
     <p class="main__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!<span class="main__text-add">Пожалуйста, заполните форму ниже:</span></p>
     <form class="form" method="post" action="https://echo.htmlacademy.ru">
-      <fieldset class="form__data form__data--name">
-        <label class="form__label" for="user-surname">Фамилия:</label>
+      <fieldset class="form__data-name">
+        <div class="form__name-wrap">
+          <div>
+        <label class="form__label form__label--name" for="user-surname">Фамилия:</label>
         <input class="form__field" id="user-surname" type="text" name="surname" placeholder="Укажите фамилию" required>
-        <label class="form__label" for="user-name">Имя:</label>
+      </div>
+      <div>
+        <label class="form__label form__label--name" for="user-name">Имя:</label>
         <input class="form__field" id="user-name" type="text" name="name" placeholder="Введите ваше имя" required>
-        <label class="form__label" for="user-patronymic">Отчество:</label>
+      </div>
+      <div>
+        <label class="form__label form__label--name" for="user-patronymic">Отчество:</label>
         <input class="form__field" id="user-patronymic" type="text" name="patronymic" placeholder="Ну и отчество тоже">
+      </div>
+      </div>
       </fieldset>
-      <div class="form__data-wrap">
         <fieldset class="form__data form__data--check">
           <legend class="form__label form__label--select">Ваши безбашенные достижения в путешествии</legend>
+          <div class="form__data-wrap form__data-wrap--check">
           <div class="form__select-wrap">
             <input class="form__checkbox visually-hidden" type="checkbox" name="selfie-with-shark" id="filter-shark" checked>
             <label class="form__select-item" for="filter-shark">Сделал селфи с акулой</label>
@@ -63,17 +71,24 @@
             <input class="form__checkbox visually-hidden" type="checkbox" name="hotel" id="filter-hotel">
             <label class="form__select-item" for="filter-hotel">Разгромил отель</label>
           </div>
+          </div>
         </fieldset>
-      </div>
-      <fieldset class="form__data form__data--info">
+      <fieldset class="form__data form__data--contact">
+        <legend class="form__label form__label--contact form__label--select">Контактная информация</legend>
+        <div class="form__data-info">
+          <div>
         <label class="form__label" for="user-phone">Номер телефона</label>
-        <input class="form__field" id="user-phone" type="tel" name="phone" placeholder="Номер, пожалуйста">
+        <input class="form__field form__field--contact" id="user-phone" type="tel" name="phone" placeholder="Номер, пожалуйста">
+      </div>
+      <div>
         <label class="form__label" for="user-address">Адрес почты</label>
-        <input class="form__field" id="user-address" type="email" name="address" placeholder="Введите почту" required>
+        <input class="form__field form__field--contact" id="user-address" type="email" name="address" placeholder="Введите почту" required>
+      </div>
+      </div>
       </fieldset>
-      <div class="form__data-wrap">
         <fieldset class="form__data form__data--app">
           <legend class="form__label form__label--select">С каким приложением путешествовали?</legend>
+          <div class="form__data-wrap form__data-wrap--app">
           <div class="form__select-wrap">
             <input class="form__radio visually-hidden" type="radio" name="select-app" value="ios" id="filter-ios" checked>
             <label class="form__select-item" for="filter-ios">Pink для iOS</label>
@@ -86,17 +101,22 @@
             <input class="form__radio visually-hidden" type="radio" name="select-app" value="windows-phone" id="filter-windows">
             <label class="form__select-item" for="filter-windows">Windows Phone</label>
           </div>
+          </div>
         </fieldset>
-      </div>
       <fieldset class="form__data form__data--review">
         <legend class="form__label form__label--select">Опишите свои эмоции</legend>
+        <div class="form__data-text">
         <textarea class="form__field form__field--textarea" name="text" rows="6" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+      </div>
       </fieldset>
+      <div class="form__submit-wrap">
       <button class="form__submit button" type="submit">Отправить форму</button>
       <p class="form__required"><sup>*</sup>— обязательные поля</p>
+    </div>
     </form>
   </main>
   <footer class="footer">
+    <div class="footer__bottom">
     <a class="logo logo--footer" href="index.html">
       <img src="img/logo.svg" width="147" height="40" alt="логотип пинк">
     </a>
@@ -107,17 +127,20 @@
     </ul>
     <div class="footer__copyright">Разработано<a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
     </div>
+  </div>
   </footer>
-  <div class="popup popup--submitted">
-    <p class="popup__title">Ваша заявка отправлена</p>
+  <section class="popup popup--submitted">
+    <h3 class="popup__title">Ваша заявка отправлена</h3>
     <p class="popup__text">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
+    <div class="popup__btn-wrap">
     <button class="popup__btn-submitted button" type="button">Закрыть окно</button>
   </div>
-  <div class="popup popup--error">
-    <p class="popup__title">Что-то пошло не так!</p>
+  </section>
+  <section class="popup popup--error">
+    <h3 class="popup__title">Что-то пошло не так!</h3>
     <p class="popup__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
     <button class="popup__btn-error button" type="button">Ок</button>
-  </div>
+  </section>
 </body>
 
 </html>

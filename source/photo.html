@@ -88,16 +88,20 @@
     <p class="main__text">Затмите их всех!<br> Выкладывайте все, что накопилось в телефоне!</p>
     <form class="main__editor-photo editor">
       <img class="editor__photo" src="img/photo-road-mobile@1x.jpg" width="280" height="374" alt="photo">
+      <div class="editor__wrapper">
       <ul class="editor__tools">
-        <li><button class="editor__control editor__control--crop editor__control--active"></button></li>
-        <li><button class="editor__control editor__control--filter"></button></li>
-        <li><button class="editor__control editor__control--contrast"></button></li>
+        <li><button class="editor__control editor__control--crop editor__control--active">crop</button></li>
+        <li><button class="editor__control editor__control--filter">filter</button></li>
+        <li><button class="editor__control editor__control--contrast">contrast</button></li>
       </ul>
+      <div class="editor__range">
       <input type="range" name="value">
       <input type="range" name="value">
       <input type="range" name="value">
+    </div>
       <button class="editor-btn editor-btn--submit" type="submit">Запостить</button>
       <button class="editor-btn editor-btn--reset" type="reset">Отмена</button>
+    </div>
     </form>
   </main>
   <footer class="footer">
