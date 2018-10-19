@@ -6,24 +6,23 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Пинк</title>
   <link href="css/style.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="css/normalize.css">
 </head>
 
 <body>
   <header class="header">
-    <nav class="header__nav header__nav--closed">
-      <div class="header__top">
-        <a class="logo" href="#"><img src="./img/logo-pink-white-mobile.svg"></a>
-        <button class="header__nav-toggle">закрыть</button>
-      </div>
-      <ul class="main-nav">
-        <li class="main-nav__list-item"><a class="main-nav__link" href="index.html">Главная</a></li>
-        <li class="main-nav__list-item"><a class="main-nav__link main-nav__link--active">Фотографии</a></li>
-        <li class="main-nav__list-item"><a class="main-nav__link" href="form.html">Конкурс</a></li>
-        <li class="main-nav__list-item"><a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML ACADEMY</a></li>
-      </ul>
-    </nav>
-    <h1 class="header__title">Фотографии пользователей</h1>
+    <div class="header__nav header__nav--opened header__nav--nojs">
+      <a class="header__logo" href="#"><img src="./img/logo-pink-white-mobile.svg"></a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle">закрыть</button>
+        <a class="main-nav__link" href="index.html">Главная</a>
+        <a class="main-nav__link main-nav__link--active">Фотографии</a>
+        <a class="main-nav__link" href="form.html">Конкурс</a>
+        <a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML ACADEMY</a>
+      </nav>
+    </div>
+    <div class="header__back">
+      <h1 class="header__title">Фотографии пользователей</h1>
+    </div>
   </header>
   <main class="main main--photo">
     <p class="main__text">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
@@ -89,19 +88,19 @@
     <form class="main__editor-photo editor">
       <img class="editor__photo" src="img/photo-road-mobile@1x.jpg" width="280" height="374" alt="photo">
       <div class="editor__wrapper">
-      <ul class="editor__tools">
-        <li><button class="editor__control editor__control--crop editor__control--active">crop</button></li>
-        <li><button class="editor__control editor__control--filter">filter</button></li>
-        <li><button class="editor__control editor__control--contrast">contrast</button></li>
-      </ul>
-      <div class="editor__range">
-      <input type="range" name="value">
-      <input type="range" name="value">
-      <input type="range" name="value">
-    </div>
-      <button class="editor-btn editor-btn--submit" type="submit">Запостить</button>
-      <button class="editor-btn editor-btn--reset" type="reset">Отмена</button>
-    </div>
+        <ul class="editor__tools">
+          <li><button class="editor__control editor__control--crop editor__control--active">crop</button></li>
+          <li><button class="editor__control editor__control--filter">filter</button></li>
+          <li><button class="editor__control editor__control--contrast">contrast</button></li>
+        </ul>
+        <div class="editor__range">
+          <input type="range" name="value">
+          <input type="range" name="value">
+          <input type="range" name="value">
+        </div>
+        <button class="editor-btn editor-btn--submit" type="submit">Запостить</button>
+        <button class="editor-btn editor-btn--reset" type="reset">Отмена</button>
+      </div>
     </form>
   </main>
   <footer class="footer">
@@ -118,6 +117,7 @@
       </div>
     </div>
   </footer>
+  <script type="text/javascript" src="js/js-toggle.js"></script>
 </body>
 
 </html>

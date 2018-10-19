@@ -11,30 +11,30 @@
 
 <body>
   <header class="header">
-    <nav class="header__nav header__nav--opened">
-      <div class="header__top">
-        <a class="logo" href="#"><img src="./img/logo-pink-white-mobile.svg"></a>
-        <button class="header__nav-toggle">закрыть</button>
-      </div>
-      <ul class="main-nav">
-        <li class="main-nav__list-item"><a class="main-nav__link main-nav__link--active">Главная</a></li>
-        <li class="main-nav__list-item"><a class="main-nav__link" href="photo.html">Фотографии</a></li>
-        <li class="main-nav__list-item"><a class="main-nav__link" href="form.html">Конкурс</a></li>
-        <li class="main-nav__list-item"><a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML ACADEMY</a></li>
-      </ul>
-    </nav>
-    <section class="download-app">
-      <div class="download-app__wrapper">
-        <h2 class="download-app__title">Взгляните на жизнь иначе!</h2>
-        <a class="download-app__button" href="https://www.apple.com/lae/itunes/" target="_blank">Скачать приложение</a>
-        <div class="download-app__links">
-          <a class="download-app__link" href="https://www.apple.com/lae/ios/app-store/" target="_blank">Apple</a>
-          <a class="download-app__link" href="https://www.androidapps.com/" target="_blank">Android</a>
-          <a class="download-app__link" href="https://www.microsoft.com/en-us/store/appsvnext/windows" target="_blank">Windows</a>
+    <div class="header__nav header__nav--opened header__nav--nojs">
+      <a class="header__logo" href="#"><img src="./img/logo-pink-white-mobile.svg"></a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle">закрыть</button>
+        <a class="main-nav__link main-nav__link--active">Главная</a>
+        <a class="main-nav__link" href="photo.html">Фотографии</a>
+        <a class="main-nav__link" href="form.html">Конкурс</a>
+        <a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML ACADEMY</a>
+      </nav>
+    </div>
+    <div class="header__back header__back--index">
+      <section class="download-app">
+        <div class="download-app__wrapper">
+          <h2 class="download-app__title">Взгляните на жизнь иначе!</h2>
+          <a class="download-app__button" href="https://www.apple.com/lae/itunes/" target="_blank">Скачать приложение</a>
+          <div class="download-app__links">
+            <a class="download-app__link" href="https://www.apple.com/lae/ios/app-store/" target="_blank">Apple</a>
+            <a class="download-app__link" href="https://www.androidapps.com/" target="_blank">Android</a>
+            <a class="download-app__link" href="https://www.microsoft.com/en-us/store/appsvnext/windows" target="_blank">Windows</a>
+          </div>
+          <p class="download-app__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
         </div>
-        <p class="download-app__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
-      </div>
-    </section>
+      </section>
+    </div>
   </header>
   <main class="main">
     <div class="subtitle">
@@ -164,6 +164,7 @@
       </div>
     </div>
   </footer>
+  <script type="text/javascript" src="js/js-toggle.js"></script>
 </body>
 
 </html>
