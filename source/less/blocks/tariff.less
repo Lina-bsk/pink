@@ -64,21 +64,21 @@
     width: 150px;
 
     &:not(:first-child) {
-    font-size: 0;
+      font-size: 0;
+    }
   }
-}
 
-@media (min-width: @desktop-width) {
+  @media (min-width: @desktop-width) {
     width: 235px;
   }
 }
 
-.tariff__field--enabled:before {
+.tariff__field--enabled::before {
   content: "";
   position: absolute;
   width: 31px;
   height: 21px;
-  background: url(../../img/yes-green.svg) no-repeat;
+  background: url("../../img/yes-green.svg") no-repeat;
   top: 25px;
   right: 2px;
 
@@ -91,12 +91,12 @@
   }
 }
 
-.tariff__field--disabled:before {
+.tariff__field--disabled::before {
   content: "";
   position: absolute;
   width: 27px;
   height: 26px;
-  background: url(../../img/no-red.svg) no-repeat;
+  background: url("../../img/no-red.svg") no-repeat;
   top: 25px;
   right: 10px;
 
