@@ -1,8 +1,120 @@
+.footer {
+  padding-top: 35px;
+}
+
+.footer__subtitle {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 300;
+  text-align: center;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 50px;
+    line-height: 61px;
+  }
+}
+
+.footer__contacts {
+  width: 280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  text-align: center;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 620px;
+    margin: 0 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 980px;
+  }
+}
+
+.footer__contact {
+  margin-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    width: 260px;
+  }
+}
+
 .footer__item {
-  .font-info (18px; 24px; 700);
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
 }
 
 .footer__info {
-  .font-info (24px; 30px; 300);
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 300;
   color: @main-color;
+  margin: 0;
+}
+
+.footer__map {
+  min-height: 200px;
+  background: url("../../img/bg-map-mobile@1x.png") no-repeat bottom;
+  background-size: cover;
+
+  @media (min-width: @tablet-width) {
+    min-height: 376px;
+    background: url("../../img/bg-map-tablet@1x.jpg") no-repeat bottom;
+    background-size: cover;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 505px;
+    background: url("../../img/bg-map-desktop@1x.jpg") no-repeat bottom;
+    background-size: cover;
+  }
+}
+
+.footer__bottom {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 940px;
+  }
+}
+
+.footer__bottom--index {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+}
+
+.social {
+  margin: 35px 0;
+}
+
+.footer__copyright {
+  margin-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 }

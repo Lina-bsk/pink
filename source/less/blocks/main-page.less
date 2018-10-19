@@ -1,7 +1,29 @@
-.subtitle {
-  .font-info (24px; 30px; 300);
-}
-
 .main__text {
   line-height: 30px;
+  margin: 0;
+  padding: 50px 20px 40px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+    padding: 90px 50px 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 90px 195px 60px;
+  }
+}
+
+.main__text-add {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline-block;
+  }
+}
+
+.main--photo {
+  @media (min-width: @desktop-width) {
+    padding: 0 130px;
+  }
 }

@@ -3,100 +3,121 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Пинк</title>
   <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
   <header class="header">
-    <div class="header__top">
-      <a href="index.html" class="logo">
-      <img class="logo__image" src="img/logo.svg" width="75" height="22" alt="Pink">
-    </a>
+    <div class="header__nav header__nav--opened header__nav--nojs">
+      <a class="header__logo" href="#"><img src="./img/logo-pink-white-mobile.svg"></a>
       <nav class="main-nav">
-        <label class="main-nav__toggle" for="menu">Mеню</label>
-        <input class="visually-hidden" id="menu" type="checkbox" name="nav-menu">
-        <ul class="main-nav__list">
-          <li class="main-nav__list-item"><a class="main-nav__link" href="index.html">Главная</a></li>
-          <li class="main-nav__list-item"><a class="main-nav__link main-nav__link--active">Фотографии</a></li>
-          <li class="main-nav__list-item"><a class="main-nav__link" href="form.html">Конкурс</a></li>
-          <li class="main-nav__list-item"><a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML ACADEMY</a></li>
-        </ul>
+        <button class="main-nav__toggle">закрыть</button>
+        <a class="main-nav__link" href="index.html">Главная</a>
+        <a class="main-nav__link main-nav__link--active">Фотографии</a>
+        <a class="main-nav__link" href="form.html">Конкурс</a>
+        <a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML ACADEMY</a>
       </nav>
     </div>
-    <h1 class="header__title">Фотографии пользователей</h1>
+    <div class="header__back">
+      <h1 class="header__title">Фотографии пользователей</h1>
+    </div>
   </header>
-  <main class="main">
+  <main class="main main--photo">
     <p class="main__text">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
     <article class="post post--best">
-      <a class="post__link" href="#"><img class="post__photo post__photo--best" src="img/photo.png" width="280" height="180" alt="photo"></a>
-      <p class="post__author">Анна<span class="post__time">(5 минут назад)</span></p>
-      <p class="post__text">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
-      <div class="post__like">Нравится: 215</div>
+      <a class="post__link" href="#"><img class="post__photo post__photo--best" src="img/panorama-mobile@1x.jpg" alt="photo"></a>
+      <div class="post__wrapper">
+        <p class="post__author">Анна <span class="post__time">(5 минут назад)</span></p>
+        <p class="post__text">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+        <div class="post__like">Нравится: 215</div>
+      </div>
     </article>
-    <article class="post">
-      <a class="post__link" href="#"><img class="post__photo" src="img/photo.png" width="280" height="180" alt="photo"></a>
-      <p class="post__author">Левон<span class="post__time">(5 часов назад)</span></p>
-      <p class="post__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
-      <div class="post__like">Нравится: 356</div>
-    </article>
-    <article class="post">
-      <a class="post__link" href="#"><img class="post__photo" src="img/photo.png" width="280" height="180" alt="photo"></a>
-      <p class="post__author">Антон<span class="post__time">(12 часов назад)</span></p>
-      <p class="post__text">Соседи будут рады!</p>
-      <div class="post__like">Нравится: 666</div>
-    </article>
-    <article class="post">
-      <a class="post__link" href="#"><img class="post__photo" src="img/photo.png" width="280" height="180" alt="photo"></a>
-      <p class="post__author">Борис<span class="post__time">(20 часов назад)</span></p>
-      <p class="post__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
-      <div class="post__like">Нравится: 215</div>
-    </article>
-    <article class="post">
-      <a class="post__link" href="#"><img class="post__photo" src="img/photo.png" width="280" height="180" alt="photo"></a>
-      <p class="post__author">Сергей<span class="post__time">(25 часов назад)</span></p>
-      <p class="post__text">Самая кубанская в мире!</p>
-      <div class="post__like">Нравится: 4</div>
-    </article>
-    <article class="post">
-      <a class="post__link" href="#"><img class="post__photo" src="img/photo.png" width="280" height="180" alt="photo"></a>
-      <p class="post__author">Максим<span class="post__time">(40 часов назад)</span></p>
-      <p class="post__text">Где снег-то?</p>
-      <div class="post__like">Нравится: 150</div>
-    </article>
-    <article class="post">
-      <a class="post__link" href="#"><img class="post__photo" src="img/photo.png" width="280" height="180" alt="photo"></a>
-      <p class="post__author">Надежда<span class="post__time">(45 часов назад)</span></p>
-      <p class="post__text">Всем GM и взаимные лайки!</p>
-      <div class="post__like">Нравится: 2560</div>
-    </article>
-    <p class="main__text">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
+    <div class="post__wrap">
+      <article class="post">
+        <a class="post__link" href="#"><img class="post__photo" src="img/photo-car-mobile@1x.jpg" width="280" height="180" alt="photo"></a>
+        <div class="post__wrapper">
+          <p class="post__author">Левон <span class="post__time">(5 часов назад)</span></p>
+          <p class="post__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+          <div class="post__like">Нравится: 356</div>
+        </div>
+      </article>
+      <article class="post">
+        <a class="post__link" href="#"><img class="post__photo" src="img/photo-drumset-mobile@1x.jpg" width="280" height="180" alt="photo"></a>
+        <div class="post__wrapper">
+          <p class="post__author">Антон <span class="post__time">(12 часов назад)</span></p>
+          <p class="post__text">Соседи будут рады!</p>
+          <div class="post__like">Нравится: 666</div>
+        </div>
+      </article>
+      <article class="post">
+        <a class="post__link" href="#"><img class="post__photo" src="img/photo-window-mobile@1x.jpg" width="280" height="180" alt="photo"></a>
+        <div class="post__wrapper">
+          <p class="post__author">Борис <span class="post__time">(20 часов назад)</span></p>
+          <p class="post__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
+          <div class="post__like">Нравится: 215</div>
+        </div>
+      </article>
+      <article class="post">
+        <a class="post__link" href="#"><img class="post__photo" src="img/photo-fair-mobile@1x.jpg" width="280" height="180" alt="photo"></a>
+        <div class="post__wrapper">
+          <p class="post__author">Сергей <span class="post__time">(25 часов назад)</span></p>
+          <p class="post__text">Самая кубанская в мире!</p>
+          <div class="post__like">Нравится: 4</div>
+        </div>
+      </article>
+      <article class="post">
+        <a class="post__link" href="#"><img class="post__photo" src="img/photo-pov-mobile@1x.jpg" width="280" height="180" alt="photo"></a>
+        <div class="post__wrapper">
+          <p class="post__author">Максим <span class="post__time">(40 часов назад)</span></p>
+          <p class="post__text">Где снег-то?</p>
+          <div class="post__like">Нравится: 150</div>
+        </div>
+      </article>
+      <article class="post">
+        <a class="post__link" href="#"><img class="post__photo" src="img/photo-wing-mobile@1x.jpg" width="280" height="180" alt="photo"></a>
+        <div class="post__wrapper">
+          <p class="post__author">Надежда <span class="post__time">(45 часов назад)</span></p>
+          <p class="post__text">Всем GM и взаимные лайки!</p>
+          <div class="post__like">Нравится: 2560</div>
+        </div>
+      </article>
+    </div>
+    <p class="main__text">Затмите их всех!<br> Выкладывайте все, что накопилось в телефоне!</p>
     <form class="main__editor-photo editor">
-      <img class="editor__photo" src="img/photo.png" width="280" height="374" alt="photo">
-      <ul class="editor__tools">
-        <li><button class="editor__control editor__control--crop editor__control--active"></button></li>
-        <li><button class="editor__control editor__control--filter"></button></li>
-        <li><button class="editor__control editor__control--contrast"></button></li>
-      </ul>
-      <input type="range" name="value">
-      <input type="range" name="value">
-      <input type="range" name="value">
-      <button class="editor__button editor__button--submit" type="submit">Запостить</button>
-      <button class="editor__button editor__button--reset" type="reset">Отмена</button>
+      <img class="editor__photo" src="img/photo-road-mobile@1x.jpg" width="280" height="374" alt="photo">
+      <div class="editor__wrapper">
+        <ul class="editor__tools">
+          <li><button class="editor__control editor__control--crop editor__control--active">crop</button></li>
+          <li><button class="editor__control editor__control--filter">filter</button></li>
+          <li><button class="editor__control editor__control--contrast">contrast</button></li>
+        </ul>
+        <div class="editor__range">
+          <input type="range" name="value">
+          <input type="range" name="value">
+          <input type="range" name="value">
+        </div>
+        <button class="editor-btn editor-btn--submit" type="submit">Запостить</button>
+        <button class="editor-btn editor-btn--reset" type="reset">Отмена</button>
+      </div>
     </form>
   </main>
   <footer class="footer">
-    <a class="logo logo--footer" href="index.html">
+    <div class="footer__bottom">
+      <a class="logo logo--footer" href="index.html">
       <img src="img/logo.svg" width="147" height="40" alt="логотип пинк">
     </a>
-    <ul class="social">
-      <li class="social__item"><a class="social__link social__link--twitter" href="#">Мы в Твитере</a></li>
-      <li class="social__item"><a class="social__link social__link--facebook" href="#">Мы в Фейсбуке</a></li>
-      <li class="social__item"><a class="social__link social__link--youtube" href="#">Мы в Ютубе</a></li>
-    </ul>
-    <div class="footer__copyright">Разработано<a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
+      <ul class="social">
+        <li class="social__item"><a class="social__link social__link--twitter" href="#">Мы в Твитере</a></li>
+        <li class="social__item"><a class="social__link social__link--facebook" href="#">Мы в Фейсбуке</a></li>
+        <li class="social__item"><a class="social__link social__link--youtube" href="#">Мы в Ютубе</a></li>
+      </ul>
+      <div class="footer__copyright">Разработано<a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
+      </div>
     </div>
   </footer>
+  <script type="text/javascript" src="js/js-toggle.js"></script>
 </body>
 
 </html>

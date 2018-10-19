@@ -3,6 +3,9 @@
   color: @white;
   background-color: rgba(255, 255, 255, 0);
   border-color: @white;
+  padding: 14px 30px;
+  border-radius: 30px;
+  display: block;
 
   &:hover {
     color: @main-color;
@@ -14,4 +17,55 @@
     color: @main-color;
     opacity: 0.3;
   }
+
+  @media (min-width: @tablet-width) {
+    z-index: 4;
+  }
+}
+
+.button {
+  width: 280px;
+  height: 62px;
+  margin: 0 auto;
+  text-align: center;
+  color: @white;
+  background-color: #2aab6d;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    width: 300px;
+  }
+}
+
+.editor-btn {
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+  border: 3px solid;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 30px;
+}
+
+.editor-btn--submit {
+  border-color: @main-color;
+  color: @main-color;
+  padding: 16px 86px;
+
+  &:hover {
+    background-color: @main-color;
+    color: @white;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.editor-btn--reset {
+  color: rgba(40, 54, 69, 0.1);
+  border-color: rgba(40, 54, 69, 0.1);
+  padding: 16px 100px;
 }
