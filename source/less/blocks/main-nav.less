@@ -1,11 +1,11 @@
 .main-nav {
   position: relative;
-  background-color: @top-color;
+  background-color: #283645;
 
   @media (min-width: @desktop-width) {
     display: flex;
     flex-wrap: wrap;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: transparent;
     padding-right: 130px;
   }
 }
@@ -18,8 +18,8 @@
   font-weight: 700;
   color: @white;
   text-transform: uppercase;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 16px;
+  padding-bottom: 14px;
   text-align: center;
   display: block;
 
@@ -34,12 +34,12 @@
 
   @media (min-width: @desktop-width) {
     border: none;
-    line-height: 18px;
+    line-height: 19px;
     font-weight: normal;
     text-transform: none;
 
     &:not(:last-child) {
-      margin-right: 70px;
+      margin-right: 80px;
     }
   }
 }
@@ -60,6 +60,10 @@
   top: -44px;
   right: 20px;
   z-index: 2;
+
+  @media (min-width: @tablet-width) {
+    top: -60px;
+  }
 
   @media (min-width: @desktop-width) {
     display: none;

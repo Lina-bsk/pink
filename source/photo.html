@@ -11,16 +11,18 @@
 <body>
   <header class="header">
     <div class="header__nav header__nav--opened header__nav--nojs">
-      <a class="header__logo" href="#"><img src="./img/logo-pink-white-mobile.svg"></a>
+      <div class="header__logo">
+        <a class="logo" href="#"><img src="./img/logo-pink-white-mobile.svg"></a>
+      </div>
       <nav class="main-nav">
         <button class="main-nav__toggle">закрыть</button>
         <a class="main-nav__link" href="index.html">Главная</a>
         <a class="main-nav__link main-nav__link--active">Фотографии</a>
         <a class="main-nav__link" href="form.html">Конкурс</a>
-        <a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML ACADEMY</a>
+        <a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
       </nav>
     </div>
-    <div class="header__back">
+    <div class="header__back header__back--photo">
       <h1 class="header__title">Фотографии пользователей</h1>
     </div>
   </header>
@@ -107,14 +109,13 @@
     <div class="footer__bottom">
       <a class="logo logo--footer" href="index.html">
       <img src="img/logo.svg" width="147" height="40" alt="логотип пинк">
-    </a>
-      <ul class="social">
-        <li class="social__item"><a class="social__link social__link--twitter" href="#">Мы в Твитере</a></li>
-        <li class="social__item"><a class="social__link social__link--facebook" href="#">Мы в Фейсбуке</a></li>
-        <li class="social__item"><a class="social__link social__link--youtube" href="#">Мы в Ютубе</a></li>
-      </ul>
-      <div class="footer__copyright">Разработано<a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
-      </div>
+      </a>
+      <section class="social">
+        <a class="social__link social__link--twitter" href="#"><span class="visually-hidden">Мы в Твитере</span></a>
+        <a class="social__link social__link--facebook" href="#"><span class="visually-hidden">Мы в Фейсбуке</span></a>
+        <a class="social__link social__link--youtube" href="#"><span class="visually-hidden">Мы в Ютубе</span></a>
+      </section>
+      <a class="footer__copyright" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">Разработано<span class="footer__copyright-logo">HTML Academy</span></a>
     </div>
   </footer>
   <script type="text/javascript" src="js/js-toggle.js"></script>

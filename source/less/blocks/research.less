@@ -3,39 +3,86 @@
 
   @media (min-width: @tablet-width) {
     display: block;
-    padding: 0 20px 90px;
+    padding: 0 20px 66px;
   }
 
   @media (min-width: @desktop-width) {
     background-color: @hue;
-    padding: 0 130px 60px;
+    padding: 0 130px 112px;
   }
 }
 
 .research__wrapper {
   @media (min-width: @tablet-width) {
     width: auto;
-    padding-left: 300px;
-    background: url("../../img/");
+    padding-left: 309px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: url("../../img/icon-timer.svg") no-repeat;
+      width: 240px;
+      height: 278px;
+      left: 0;
+      bottom: -28px;
+      background-size: cover;
+
+      @media (min-width: @desktop-width) {
+        width: 299px;
+        height: 345px;
+        left: 0;
+        bottom: -44px;
+      }
+    }
+
+    &::after {
+      content: "24";
+      font-size: 96px;
+      line-height: 165px;
+      font-weight: 700;
+      text-align: center;
+      vertical-align: middle;
+      color: @main-color;
+      position: absolute;
+      width: 176px;
+      height: 176px;
+      border: 13px solid @main-color;
+      border-radius: 50%;
+      left: 19px;
+      bottom: -8px;
+
+      @media (min-width: @desktop-width) {
+        font-size: 120px;
+        line-height: 201px;
+        width: 219px;
+        height: 219px;
+        border-width: 18px;
+        left: 22px;
+        bottom: -23px;
+      }
+    }
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 350px;
+    padding-left: 366px;
   }
 }
 
 .research__title {
   @media (min-width: @tablet-width) {
+    padding: 95px 0 10px;
     margin: 0;
     font-size: 30px;
     line-height: 36px;
     font-weight: 700;
     color: @black;
-    padding-top: 95px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-bottom: 20px;
+    line-height: 30px;
+    padding-bottom: 24px;
+    padding-top: 126px;
 
     br {
       display: none;
@@ -45,13 +92,15 @@
 
 .research__text {
   @media (min-width: @tablet-width) {
-    padding: 0 40px 0 0;
-    margin: 0;
+    padding: 0;
+    margin: 0 5px 10px 0;
   }
 
   @media (min-width: @desktop-width) {
     font-size: 18px;
-    padding: 0 0 40px;
+    line-height: 30px;
+    padding: 0 0 33px;
+    margin: 0;
   }
 }
 
@@ -59,5 +108,11 @@
   @media (min-width: @tablet-width) {
     text-decoration: underline;
     color: @main-color;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+    line-height: 30px;
+    text-decoration: underline;
   }
 }

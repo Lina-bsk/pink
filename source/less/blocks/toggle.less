@@ -1,0 +1,39 @@
+.toggle {
+  display: flex;
+  justify-content: center;
+
+  &--tariff {
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+
+  &--reviews {
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
+  }
+}
+
+.toggle__item {
+  position: relative;
+  font-size: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(@top-color, 0.3);
+  border: 3px solid @white;
+
+  &--bg {
+    border-color: @hue;
+  }
+
+  &:not(:last-child) {
+    margin-right: 14px;
+  }
+}
+
+.toggle__item--checked {
+  border-color: #283645;
+  background-color: #ffffff;
+}

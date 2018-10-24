@@ -1,5 +1,13 @@
 .footer {
-  padding-top: 35px;
+  padding-top: 42px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 46px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 61px;
+  }
 }
 
 .footer__subtitle {
@@ -27,7 +35,7 @@
   flex-direction: column;
   list-style: none;
   text-align: center;
-  padding: 0;
+  padding: 34px 0 15px;
 
   @media (min-width: @tablet-width) {
     width: 620px;
@@ -35,18 +43,38 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    padding: 43px 0 10px;
   }
 
   @media (min-width: @desktop-width) {
     width: 980px;
+    padding-top: 54px;
   }
 }
 
 .footer__contact {
-  margin-bottom: 25px;
+  margin-bottom: 23px;
 
   @media (min-width: @tablet-width) {
     width: 260px;
+
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--phone {
+      order: 1;
+    }
+
+    &--mail {
+      order: 3;
+    }
+
+    &--address {
+      order: 2;
+    }
   }
 }
 
@@ -54,6 +82,10 @@
   font-size: 18px;
   font-weight: 700;
   margin: 0;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 24px;
+  }
 }
 
 .footer__info {
@@ -68,9 +100,25 @@
   min-height: 200px;
   background: url("../../img/bg-map-mobile@1x.png") no-repeat bottom;
   background-size: cover;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background: url("../../img/bg-triangle-white-footer.svg") no-repeat;
+    height: 70px;
+    width: 100%;
+    background-size: contain;
+    top: -1px;
+
+    @media (min-width: @desktop-width) {
+      height: 125px;
+      top: -1px;
+    }
+  }
 
   @media (min-width: @tablet-width) {
-    min-height: 376px;
+    min-height: 374px;
     background: url("../../img/bg-map-tablet@1x.jpg") no-repeat bottom;
     background-size: cover;
   }
@@ -83,19 +131,18 @@
 }
 
 .footer__bottom {
-  padding: 0 20px;
+  padding: 35px 20px 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
-    justify-content: space-between;
-    margin: 0 auto;
   }
 
   @media (min-width: @desktop-width) {
     width: 940px;
+    margin: 0 auto;
   }
 }
 
@@ -107,14 +154,21 @@
   }
 }
 
-.social {
-  margin: 35px 0;
-}
 
 .footer__copyright {
   margin-bottom: 35px;
+  line-height: 18px;
+  color: @black;
 
   @media (min-width: @tablet-width) {
-    margin: 0;
+    margin: 0 0 0 auto;
   }
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+  }
+}
+
+.footer__logo-academy {
+  padding-left: 15px;
 }

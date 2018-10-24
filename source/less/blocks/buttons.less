@@ -3,9 +3,12 @@
   color: @white;
   background-color: rgba(255, 255, 255, 0);
   border-color: @white;
-  padding: 14px 30px;
   border-radius: 30px;
-  display: block;
+  display: flex;
+  height: 49px;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
 
   &:hover {
     color: @main-color;
@@ -20,6 +23,11 @@
 
   @media (min-width: @tablet-width) {
     z-index: 4;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 21px;
+    line-height: 21px;
   }
 }
 
@@ -53,6 +61,7 @@
   border-color: @main-color;
   color: @main-color;
   padding: 16px 86px;
+  margin-bottom: 20px;
 
   &:hover {
     background-color: @main-color;

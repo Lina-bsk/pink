@@ -9,6 +9,10 @@
     width: auto;
     padding: 0 20px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
 }
 
 .post {
@@ -17,6 +21,12 @@
 
   @media (min-width: @tablet-width) {
     width: 300px;
+  }
+
+  @media (min-width: @desktop-width) {
+    &:not(:last-child) {
+      margin-right: 12px;
+    }
   }
 }
 
