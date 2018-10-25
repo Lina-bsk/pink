@@ -12,16 +12,18 @@
 <body>
   <header class="header">
     <div class="header__nav header__nav--opened header__nav--nojs">
-      <a class="header__logo" href="#"><img src="./img/logo-pink-white-mobile.svg"></a>
+      <div class="header__logo">
+        <a class="logo" href="#"><img src="./img/logo-pink-white-mobile.svg"></a>
+      </div>
       <nav class="main-nav">
         <button class="main-nav__toggle">закрыть</button>
         <a class="main-nav__link" href="index.html">Главная</a>
         <a class="main-nav__link" href="photo.html">Фотографии</a>
         <a class="main-nav__link main-nav__link--active">Конкурс</a>
-        <a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML ACADEMY</a>
+        <a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
       </nav>
     </div>
-    <div class="header__back">
+    <div class="header__back header__back--form">
       <h1 class="header__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
     </div>
   </header>
@@ -48,28 +50,28 @@
         <legend class="form__label form__label--select">Ваши безбашенные достижения в путешествии</legend>
         <div class="form__data-wrap form__data-wrap--check">
           <div class="form__select-wrap">
-            <input class="form__checkbox visually-hidden" type="checkbox" name="selfie-with-shark" id="filter-shark" checked>
-            <label class="form__select-item" for="filter-shark">Сделал селфи с акулой</label>
+            <input class="form__check visually-hidden" type="checkbox" name="selfie-with-shark" id="filter-shark" checked>
+            <label class="form__checkbox form__select-item" for="filter-shark">Сделал селфи с акулой</label>
           </div>
           <div class="form__select-wrap">
-            <input class="form__checkbox visually-hidden" type="checkbox" name="tan" id="filter-tan" checked>
-            <label class="form__select-item" for="filter-tan">Обгорел на пляже</label>
+            <input class="form__check visually-hidden" type="checkbox" name="tan" id="filter-tan" checked>
+            <label class="form__checkbox form__select-item" for="filter-tan">Обгорел на пляже</label>
           </div>
           <div class="form__select-wrap">
-            <input class="form__checkbox visually-hidden" type="checkbox" name="chuck-norris" id="filter-chuck-norris">
-            <label class="form__select-item" for="filter-chuck-norris">Видел Чака Норриса</label>
+            <input class="form__check visually-hidden" type="checkbox" name="chuck-norris" id="filter-chuck-norris">
+            <label class="form__checkbox form__select-item" for="filter-chuck-norris">Видел Чака Норриса</label>
           </div>
           <div class="form__select-wrap">
-            <input class="form__checkbox visually-hidden" type="checkbox" name="bought-souvenirs" id="filter-bought-souvenirs">
-            <label class="form__select-item" for="filter-bought-souvenirs">Накупил сувениров</label>
+            <input class="form__check visually-hidden" type="checkbox" name="bought-souvenirs" id="filter-bought-souvenirs">
+            <label class="form__checkbox form__select-item" for="filter-bought-souvenirs">Накупил сувениров</label>
           </div>
           <div class="form__select-wrap">
-            <input class="form__checkbox visually-hidden" type="checkbox" name="tower" id="filter-tower" checked>
-            <label class="form__select-item" for="filter-tower">Удержал башню</label>
+            <input class="form__check visually-hidden" type="checkbox" name="tower" id="filter-tower" checked>
+            <label class="form__checkbox form__select-item" for="filter-tower">Удержал башню</label>
           </div>
           <div class="form__select-wrap">
-            <input class="form__checkbox visually-hidden" type="checkbox" name="hotel" id="filter-hotel">
-            <label class="form__select-item" for="filter-hotel">Разгромил отель</label>
+            <input class="form__check visually-hidden" type="checkbox" name="hotel" id="filter-hotel">
+            <label class="form__checkbox form__select-item" for="filter-hotel">Разгромил отель</label>
           </div>
         </div>
       </fieldset>
@@ -91,22 +93,22 @@
         <div class="form__data-wrap form__data-wrap--app">
           <div class="form__select-wrap">
             <input class="form__radio visually-hidden" type="radio" name="select-app" value="ios" id="filter-ios" checked>
-            <label class="form__select-item" for="filter-ios">Pink для iOS</label>
+            <label class="form__radio-btn form__select-item" for="filter-ios">Pink для iOS</label>
           </div>
           <div class="form__select-wrap">
             <input class="form__radio visually-hidden" type="radio" name="select-app" value="Android" id="filter-android">
-            <label class="form__select-item" for="filter-android">Pink на Android</label>
+            <label class=" form__radio-btn form__select-item" for="filter-android">Pink на Android</label>
           </div>
           <div class="form__select-wrap">
             <input class="form__radio visually-hidden" type="radio" name="select-app" value="windows-phone" id="filter-windows">
-            <label class="form__select-item" for="filter-windows">Windows Phone</label>
+            <label class="form__radio-btn form__select-item" for="filter-windows">Windows Phone</label>
           </div>
         </div>
       </fieldset>
       <fieldset class="form__data form__data--review">
         <legend class="form__label form__label--select">Опишите свои эмоции</legend>
         <div class="form__data-text">
-          <textarea class="form__field form__field--textarea" name="text" rows="6" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+          <textarea class="form__field form__field--textarea" name="text" rows="8" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
         </div>
       </fieldset>
       <div class="form__submit-wrap">
@@ -119,14 +121,13 @@
     <div class="footer__bottom">
       <a class="logo logo--footer" href="index.html">
       <img src="img/logo.svg" width="147" height="40" alt="логотип пинк">
-    </a>
-      <ul class="social">
-        <li class="social__item"><a class="social__link social__link--twitter" href="#">Мы в Твитере</a></li>
-        <li class="social__item"><a class="social__link social__link--facebook" href="#">Мы в Фейсбуке</a></li>
-        <li class="social__item"><a class="social__link social__link--youtube" href="#">Мы в Ютубе</a></li>
-      </ul>
-      <div class="footer__copyright">Разработано<a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
-      </div>
+      </a>
+      <section class="social">
+        <a class="social__link social__link--twitter" href="#"><span class="visually-hidden">Мы в Твитере</span></a>
+        <a class="social__link social__link--facebook" href="#"><span class="visually-hidden">Мы в Фейсбуке</span></a>
+        <a class="social__link social__link--youtube" href="#"><span class="visually-hidden">Мы в Ютубе</span></a>
+      </section>
+      <a class="footer__copyright" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">Разработано<span class="footer__copyright-logo">HTML Academy</span></a>
     </div>
   </footer>
   <section class="popup popup--submitted">

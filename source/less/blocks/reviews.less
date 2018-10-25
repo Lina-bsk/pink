@@ -1,10 +1,15 @@
 .reviews {
-  width: 280px;
   margin: 0 auto;
+  padding: 0 20px 30px;
 
   @media (min-width: @tablet-width) {
-    width: 620px;
-    margin: 0 auto;
+    padding: 59px 20px 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 184px 130px 0;
+    display: flex;
+    justify-content: space-between;
   }
 }
 
@@ -13,7 +18,14 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 33px;
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+    line-height: 30px;
+    width: 700px;
+    padding-bottom: 30px;
+  }
 }
 
 .reviews__author {
@@ -22,12 +34,20 @@
   font-weight: 700;
   font-style: normal;
   color: @black;
-  padding-top: 45px;
-  padding-bottom: 25px;
+  padding-top: 40px;
+  padding-bottom: 13px;
 
   @media (min-width: @tablet-width) {
+    font-size: 20px;
     order: 1;
     padding: 0;
+    margin-bottom: 3px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
   }
 }
 
@@ -38,7 +58,6 @@
     display: block;
     line-height: 30px;
     order: 2;
-    padding-bottom: 30px;
   }
 }
 
@@ -46,6 +65,11 @@
   line-height: 30px;
   font-weight: 400;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+    margin-bottom: 36px;
+  }
 }
 
 .reviews__item--2,
@@ -53,30 +77,30 @@
   display: none;
 }
 
-.reviews__toggles {
-  margin-bottom: 40px;
+.reviews__arrows {
+  display: none;
 
   @media (min-width: @desktop-width) {
-    display: none;
-  }
-}
+    display: block;
+    position: relative;
+    width: 22px;
+    height: 41px;
+    margin-top: 29px;
 
-.toggle {
-  text-align: center;
-}
+    &--previous::before {
+      content: "";
+      position: absolute;
+      width: 22px;
+      height: 41px;
+      background: url("../../img/icon-review-arrow-left.svg") no-repeat;
+    }
 
-.toggle__item {
-  margin-right: 13px;
-  position: relative;
-  font-size: 0;
-  padding-left: 12px;
-
-  &::before {
-    content: "";
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background-color: rgba(@top-color, 0.3);
+    &--next::before {
+      content: "";
+      position: absolute;
+      width: 22px;
+      height: 41px;
+      background: url("../../img/icon-review-arrow-right.svg") no-repeat;
+    }
   }
 }

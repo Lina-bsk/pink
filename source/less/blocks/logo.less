@@ -1,0 +1,43 @@
+.logo {
+  height: 22px;
+  width: 75px;
+  display: block;
+
+  .logo__m,
+  .logo__l {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 147px;
+    height: 41px;
+
+    .logo__m {
+      display: block;
+    }
+
+    .logo__s,
+    .logo__l {
+      display: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    .logo__l {
+      display: block;
+    }
+
+    .logo__s,
+    .logo__m {
+      display: none;
+    }
+  }
+}
+
+.logo__footer {
+  @media (min-width: @tablet-width) {
+    path .logo-glasses {
+      fill: @main-color;
+    }
+  }
+}
