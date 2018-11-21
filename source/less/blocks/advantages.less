@@ -1,10 +1,22 @@
 .advantages {
-  padding-top: 85px;
-  background-image: linear-gradient(-186deg, @white 0, @white 36px, @hue 36px, @hue 100%);
+  padding-top: 112px;
+  background-image: linear-gradient(-186deg, @white 0, @white 7.5%, @hue 7.5%, @hue 100%);
+  background-color: @hue;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: auto;
+    height: 35px;
+    background: url("../../img/bg-triangle-white.svg") no-repeat;
+    top: 0;
+    left: 0;
+  }
 
   @media (min-width: @tablet-width) {
-    padding: 73px 20px 44px;
-    background-image: linear-gradient(-184deg, @white 0, @white 47px, @hue 47px, @hue 100%);
+    padding: 121px 20px 44px;
+    background-image: linear-gradient(-184deg, @white 0, @white 16.5%, @hue 16.5%, @hue 100%);
   }
 
   @media (min-width: @desktop-width) {
@@ -71,8 +83,8 @@
       width: 269px;
       height: 482px;
       background: url("../../img/iphone-screen-3-tablet@1x.png") no-repeat;
-      left: 0;
-      top: -354px;
+      left: 1px;
+      top: -355px;
     }
   }
 

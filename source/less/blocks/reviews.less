@@ -1,15 +1,26 @@
 .reviews {
   margin: 0 auto;
-  padding: 0 20px 30px;
+  padding: 0 20px 0;
 
   @media (min-width: @tablet-width) {
-    padding: 59px 20px 24px;
+    padding: 59px 20px 0;
   }
 
   @media (min-width: @desktop-width) {
     padding: 184px 130px 0;
     display: flex;
     justify-content: space-between;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: url("../../img/icon-quotes.svg") no-repeat;
+      width: 79px;
+      height: 64px;
+      top: 72px;
+      left: 47%;
+    }
   }
 }
 
@@ -36,12 +47,13 @@
   color: @black;
   padding-top: 40px;
   padding-bottom: 13px;
+  margin: 0;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     order: 1;
     padding: 0;
-    margin-bottom: 3px;
+    margin-bottom: 2px;
   }
 
   @media (min-width: @desktop-width) {
@@ -72,9 +84,29 @@
   }
 }
 
+.reviews__item--1,
 .reviews__item--2,
 .reviews__item--3 {
   display: none;
+}
+
+.reviews__one:checked ~ .reviews__item--1 {
+  display: flex;
+}
+
+.reviews__two:checked ~ .reviews__item--2 {
+  display: flex;
+}
+
+.reviews__three:checked ~ .reviews__item--3 {
+  display: flex;
+}
+
+.reviews__one:checked ~ .toggle--reviews .toggle__item--1,
+.reviews__two:checked ~ .toggle--reviews .toggle__item--2,
+.reviews__three:checked ~ .toggle--reviews .toggle__item--3 {
+  border-color: #283645;
+  background-color: #ffffff;
 }
 
 .reviews__arrows {

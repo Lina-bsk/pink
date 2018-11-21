@@ -1,20 +1,20 @@
 .subtitle {
-  width: 280px;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 40px;
+  padding: 40px 20px 0 20px;
+  box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
-    width: 620px;
+    width: auto;
+    max-width: 940px;
     margin: 0 auto;
     padding-top: 50px;
-    padding-bottom: 47px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 940px;
     margin: 0 auto;
     padding-bottom: 70px;
     padding-top: 67px;
@@ -29,6 +29,10 @@
   margin: 0;
   margin-bottom: 27px;
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   @media (min-width: @tablet-width) {
     font-size: 40px;
     line-height: 48px;
@@ -36,8 +40,8 @@
     margin: 0;
 
     &:last-child {
-      padding-left: 130px;
-      padding-right: 130px;
+      padding-left: 20%;
+      padding-right: 20%;
     }
   }
 

@@ -4,11 +4,9 @@
   background-color: rgba(255, 255, 255, 0);
   border-color: @white;
   border-radius: 30px;
-  display: flex;
-  height: 49px;
-  align-items: center;
-  justify-content: center;
-  align-self: stretch;
+  display: block;
+  padding: 14px 0 17px 0;
+  text-align: center;
 
   &:hover {
     color: @main-color;
@@ -28,12 +26,12 @@
   @media (min-width: @desktop-width) {
     font-size: 21px;
     line-height: 21px;
+    padding: 14px 27px 15px;
   }
 }
 
 .button {
   width: 280px;
-  height: 62px;
   margin: 0 auto;
   text-align: center;
   color: @white;
@@ -42,6 +40,8 @@
   line-height: 30px;
   font-weight: 700;
   text-transform: uppercase;
+  padding: 16px 0;
+  border-radius: 3px;
 
   @media (min-width: @tablet-width) {
     width: 300px;
