@@ -9,6 +9,15 @@
 </head>
 
 <body>
+  <svg style="display:none">
+    <symbol id="like-heart">
+      <svg fill="#d22856" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="12.545px" height="11.99px" viewBox="521.939 473.064 12.545 11.99" enable-background="new 521.939 473.064 12.545 11.99" xml:space="preserve">
+        <g>
+          <path d="M528.174,485.055c-0.212,0-0.412-0.091-0.552-0.249c-3.798-4.324-4.644-5.298-4.858-5.572l-0.004,0.0 c-0.529-0.675-0.821-1.518-0.821-2.373c0-2.095,1.704-3.799,3.799-3.799c0.934,0,1.804,0.32,2.484,0.898 c0.696-0.578,1.56-0.898,2.463-0.898c2.095,0,3.799,1.704,3.799,3.799c0,0.909-0.318,1.754-0.896,2.381l-4.86,5.561 C528.587,484.964,528.386,485.055,528.174,485.055L528.174,485.055z M523.929,478.349c0.208,0.255,2.471,2.839,4.243,4.858 l4.323-4.944c0.34-0.369,0.52-0.86,0.52-1.399c0-1.285-1.045-2.331-2.33-2.331c-0.729,0-1.421,0.344-1.9,0.943 c-0.142,0.178-0.353,0.267-0.585,0.275c-0.227-0.003-0.439-0.111-0.575-0.294c-0.441-0.587-1.129-0.925-1.887-0.925 c-1.285,0-2.33,1.046-2.33,2.331c0,0.678,0.275,1.171,0.507,1.467C523.919,478.336,523.925,478.342,523.929,478.349z" />
+        </g>
+      </svg>
+    </symbol>
+  </svg>
   <header class="header">
     <div class="header__nav header__nav--opened header__nav--nojs">
       <div class="header__logo">
@@ -23,82 +32,159 @@
       </nav>
     </div>
     <div class="header__back header__back--photo">
-      <h1 class="header__title">Фотографии пользователей</h1>
+      <h1 class="header__title header__title--photo">Фотографии пользователей</h1>
     </div>
   </header>
   <main class="main main--photo">
-    <p class="main__text">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+    <p class="main__text main__text--photo">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
     <article class="post post--best">
-      <a class="post__link" href="#"><img class="post__photo post__photo--best" src="img/panorama-mobile@1x.jpg" alt="photo"></a>
-      <div class="post__wrapper">
-        <p class="post__author">Анна <span class="post__time">(5 минут назад)</span></p>
-        <p class="post__text">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
-        <div class="post__like">Нравится: 215</div>
+      <a class="post__link post__link--best" href="#">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/panorama-desktop@1x.jpg, img/panorama-desktop@2x.jpg 2x">
+          <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg, img/panorama-tablet@2x.jpg 2x">
+          <img class="post__photo post__photo--best" src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x" alt="Панорама дня">
+        </picture>
+      </a>
+      <div class="post__wrapper post__wrapper--best">
+        <p class="post__author post__author--best">Анна <span class="post__time">(5 минут назад)</span></p>
+        <p class="post__text post__text--best">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+        <div class="post__like post__like--best"><a class="post__like-heart post__like-heart--best" href="#" aria-label="нравится"><svg width="13" height="12"><use xlink:href="#like-heart"></use></svg></a><span class="post__like-number">Нравится: 215</span></div>
       </div>
     </article>
     <div class="post__wrap">
       <article class="post">
-        <a class="post__link" href="#"><img class="post__photo" src="img/photo-car-mobile@1x.jpg" width="280" height="180" alt="photo"></a>
+        <a class="post__link" href="#">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/photo-car-desktop@1x.jpg, img/photo-car-desktop@2x.jpg 2x">
+            <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg, img/photo-car-tablet@2x.jpg 2x">
+          <img class="post__photo" src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@2x.jpg 2x" alt="photo">
+          </picture>
+        </a>
         <div class="post__wrapper">
           <p class="post__author">Левон <span class="post__time">(5 часов назад)</span></p>
           <p class="post__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
-          <div class="post__like">Нравится: 356</div>
+          <div class="post__like"><a class="post__like-heart" href="#" aria-label="нравится"><svg width="13" height="12"><use xlink:href="#like-heart"></use></svg></a><span class="post__like-number">Нравится: 356</span></div>
         </div>
       </article>
       <article class="post">
-        <a class="post__link" href="#"><img class="post__photo" src="img/photo-drumset-mobile@1x.jpg" width="280" height="180" alt="photo"></a>
+        <a class="post__link" href="#">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/photo-drumset-desktop@1x.jpg, img/photo-drumset-desktop@2x.jpg 2x">
+            <source media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.jpg, img/photo-drumset-tablet@2x.jpg 2x">
+          <img class="post__photo" src="img/photo-drumset-mobile@1x.jpg" srcset="img/photo-drumset-mobile@2x.jpg 2x" alt="photo">
+        </picture>
+      </a>
         <div class="post__wrapper">
           <p class="post__author">Антон <span class="post__time">(12 часов назад)</span></p>
           <p class="post__text">Соседи будут рады!</p>
-          <div class="post__like">Нравится: 666</div>
+          <div class="post__like"><a class="post__like-heart" href="#" aria-label="нравится"><svg width="13" height="12"><use xlink:href="#like-heart"></use></svg></a><span class="post__like-number">Нравится: 666</span></div>
         </div>
       </article>
       <article class="post">
-        <a class="post__link" href="#"><img class="post__photo" src="img/photo-window-mobile@1x.jpg" width="280" height="180" alt="photo"></a>
+        <a class="post__link" href="#">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/photo-window-desktop@1x.jpg, img/photo-window-desktop@2x.jpg 2x">
+            <source media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.jpg, img/photo-window-tablet@2x.jpg 2x">
+          <img class="post__photo" src="img/photo-window-mobile@1x.jpg" srcset="img/photo-window-mobile@2x.jpg 2x" alt="photo">
+        </picture>
+        </a>
         <div class="post__wrapper">
           <p class="post__author">Борис <span class="post__time">(20 часов назад)</span></p>
           <p class="post__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
-          <div class="post__like">Нравится: 215</div>
+          <div class="post__like"><a class="post__like-heart" href="#" aria-label="нравится"><svg width="13" height="12"><use xlink:href="#like-heart"></use></svg></a><span class="post__like-number">Нравится: 215</span></div>
         </div>
       </article>
       <article class="post">
-        <a class="post__link" href="#"><img class="post__photo" src="img/photo-fair-mobile@1x.jpg" width="280" height="180" alt="photo"></a>
+        <a class="post__link" href="#">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/photo-fair-desktop@1x.jpg, img/photo-fair-desktop@2x.jpg 2x">
+            <source media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.jpg, img/photo-fair-tablet@2x.jpg 2x">
+          <img class="post__photo" src="img/photo-fair-mobile@1x.jpg" srcset="img/photo-fair-mobile@2x.jpg 2x" width="280" height="180" alt="photo">
+        </picture>
+        </a>
         <div class="post__wrapper">
           <p class="post__author">Сергей <span class="post__time">(25 часов назад)</span></p>
-          <p class="post__text">Самая кубанская в мире!</p>
-          <div class="post__like">Нравится: 4</div>
+          <p class="post__text post__text--margin">Самая кубанская в мире!</p>
+          <div class="post__like"><a class="post__like-heart" href="#" aria-label="нравится"><svg width="13" height="12"><use xlink:href="#like-heart"></use></svg></a><span class="post__like-number">Нравится: 4</span></div>
         </div>
       </article>
       <article class="post">
-        <a class="post__link" href="#"><img class="post__photo" src="img/photo-pov-mobile@1x.jpg" width="280" height="180" alt="photo"></a>
+        <a class="post__link" href="#">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/photo-pov-desktop@1x.jpg, img/photo-pov-desktop@2x.jpg 2x">
+            <source media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.jpg, img/photo-pov-tablet@2x.jpg 2x">
+          <img class="post__photo" src="img/photo-pov-mobile@1x.jpg" srcset="img/photo-pov-mobile@2x.jpg 2x" alt="photo">
+        </picture>
+        </a>
         <div class="post__wrapper">
           <p class="post__author">Максим <span class="post__time">(40 часов назад)</span></p>
           <p class="post__text">Где снег-то?</p>
-          <div class="post__like">Нравится: 150</div>
+          <div class="post__like"><a class="post__like-heart" href="#" aria-label="нравится"><svg width="13" height="12"><use xlink:href="#like-heart"></use></svg></a><span class="post__like-number">Нравится: 150</span></div>
         </div>
       </article>
       <article class="post">
-        <a class="post__link" href="#"><img class="post__photo" src="img/photo-wing-mobile@1x.jpg" width="280" height="180" alt="photo"></a>
+        <a class="post__link" href="#">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/photo-wing-desktop@1x.jpg, img/photo-wing-desktop@2x.jpg 2x">
+            <source media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.jpg, img/photo-wing-tablet@2x.jpg 2x">
+          <img class="post__photo" src="img/photo-wing-mobile@1x.jpg" srcset="img/photo-wing-mobile@2x.jpg 2x" alt="photo">
+        </picture>
+        </a>
         <div class="post__wrapper">
           <p class="post__author">Надежда <span class="post__time">(45 часов назад)</span></p>
           <p class="post__text">Всем GM и взаимные лайки!</p>
-          <div class="post__like">Нравится: 2560</div>
+          <div class="post__like"><a class="post__like-heart" href="#" aria-label="нравится"><svg width="13" height="12"><use xlink:href="#like-heart"></use></svg></a><span class="post__like-number">Нравится: 2560</span></div>
         </div>
       </article>
     </div>
-    <p class="main__text">Затмите их всех!<br> Выкладывайте все, что накопилось в телефоне!</p>
+    <p class="main__text main__text--photo-bottom">
+      <span class="main__text-item">Затмите их всех!</span>
+      <span class="main__text-item">Выкладывайте все, что накопилось в телефоне!</span>
+    </p>
     <form class="main__editor-photo editor">
-      <img class="editor__photo" src="img/photo-road-mobile@1x.jpg" width="280" height="374" alt="photo">
+      <div class="editor__photo-wrap">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/photo-road-desktop@1x.jpg, img/photo-road-desktop@2x.jpg 2x">
+          <source media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.jpg, img/photo-road-tablet@2x.jpg 2x">
+          <img class="editor__photo" src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg 2x" alt="photo">
+    </picture>
+      </div>
       <div class="editor__wrapper">
-        <ul class="editor__tools">
-          <li><button class="editor__control editor__control--crop editor__control--active">crop</button></li>
-          <li><button class="editor__control editor__control--filter">filter</button></li>
-          <li><button class="editor__control editor__control--contrast">contrast</button></li>
-        </ul>
-        <div class="editor__range">
-          <input type="range" name="value">
-          <input type="range" name="value">
-          <input type="range" name="value">
+        <div class="editor__tools">
+          <div class="editor__tools-wrap editor__tools-wrap--1">
+            <input class="editor__crop visually-hidden" type="checkbox" name="crop" id="crop-btn">
+            <label class="editor__control" for="crop-btn"><svg class="editor__icon-crop" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
+                <path fill="none" d="M0,0h48v48H0V0z" />
+                <path class="editor__crop-icon" d="M34,30h4V14c0-2.21-1.79-4-4-4H18v4h16V30z M14,34V2h-4v8H2v4h8v20c0,2.21,1.79,4,4,4h20v8h4v-8h8v-4H14z" />
+              </svg>
+            </label>
+            <div class="editor__range editor__range--crop">
+              <div class="editor__range-control editor__range-control--crop"></div>
+            </div>
+          </div>
+          <div class="editor__tools-wrap editor__tools-wrap--2">
+            <input class="editor__fill visually-hidden" type="checkbox" name="fill" id="fill-btn">
+            <label class="editor__control editor__control--fill" for="fill-btn"><svg class="editor__icon-fill" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
+                <path fill="none" d="M0,0h48v48H0V0z" />
+                <path class="editor__fill-icon" d="M33.12,17.88L15.24,0l-2.83,2.83l4.76,4.76L6.88,17.88c-1.17,1.17-1.17,3.07,0,4.24l11,11C18.46,33.71,19.23,34,20,34 s1.54-0.29,2.12-0.88l11-11C34.29,20.95,34.29,19.05,33.12,17.88z M10.41,20L20,10.42L29.59,20H10.41z M38,23c0,0-4,4.33-4,7 c0,2.21,1.79,4,4,4s4-1.79,4-4C42,27.33,38,23,38,23z" />
+                <rect y="40" width="48" height="3" />
+              </svg>
+            </label>
+            <div class="editor__range editor__range--fill">
+              <div class="editor__range-control editor__range-control--fill"></div>
+            </div>
+          </div>
+          <div class="editor__tools-wrap editor__tools-wrap--3">
+            <input class="editor__contrast visually-hidden" type="checkbox" name="contrast" id="contrast-btn">
+            <label class="editor__control editor__control--contrast" for="contrast-btn"><svg class="editor__icon-contrast" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="31.92px" height="31.92px" viewBox="-35.422 -7.96 31.92 31.92" enable-background="new -35.422 -7.96 31.92 31.92" xml:space="preserve">
+                <path class="editor__contrast" fill="#231F20" d="M-19.462-3.96c6.595,0,11.96,5.365,11.96,11.96s-5.365,11.96-11.96,11.96S-31.422,14.595-31.422,8 S-26.057-3.96-19.462-3.96 M-19.462-7.96c-8.814,0-15.96,7.145-15.96,15.96c0,8.813,7.146,15.96,15.96,15.96S-3.502,16.813-3.502,8 C-3.502-0.815-10.648-7.96-19.462-7.96L-19.462-7.96z" />
+                <path class="editor__contrast" d="M-19.462,16.331c4.706,0,8.52-3.813,8.52-8.52c0-4.705-3.813-8.519-8.52-8.519" />
+              </svg>
+            </label>
+            <div class="editor__range editor__range--contrast">
+              <div class="editor__range-control editor__range-control--contrast"></div>
+            </div>
+          </div>
         </div>
         <button class="editor-btn editor-btn--submit" type="submit">Запостить</button>
         <button class="editor-btn editor-btn--reset" type="reset">Отмена</button>

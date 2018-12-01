@@ -1,27 +1,61 @@
 .editor {
   background-color: @hue;
-  padding: 18px 20px;
+  padding: 20px 0 42px;
   display: flex;
   flex-direction: column;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
+    padding: 57px 0 54px;
+    max-width: 940px;
+    margin: 0 auto;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0 130px;
+    padding-top: 52px;
+  }
+}
+
+.editor__photo-wrap {
+  padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    width: 51.5%;
+    max-width: 460px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 5px;
+  }
+}
+
+.editor__photo {
+  display: block;
+
+  @media (min-width: @tablet-width) {
+    width: 300px;
+    height: 400px;
+    margin: 0 auto;
   }
 }
 
 .editor__tools {
   margin: 0;
-  padding: 0;
-  list-style: none;
+  padding: 41px 41px 112px 38px;
   display: flex;
   justify-content: space-around;
+  align-items: center;
 
   @media (min-width: @tablet-width) {
     flex-direction: column;
+    align-items: stretch;
+    padding: 8px 20px 43px 27px;
+    width: 100%;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 20px 108px 8px;
   }
 }
 
@@ -29,6 +63,211 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
+    width: 48%;
+  }
+}
+
+.editor__crop:checked ~ .editor__control .editor__crop-icon,
+.editor__fill:checked ~ .editor__control .editor__fill-icon {
+  fill: @main-color;
+}
+
+.editor__crop:checked ~ .editor__range--crop,
+.editor__fill:checked ~ .editor__range--fill,
+.editor__contrast:checked ~ .editor__range--contrast {
+  display: block;
+}
+
+.editor__tools-wrap {
+  position: relative;
+
+  &--1::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    background-color: #dddfe0;
+    width: 320px;
+    bottom: -73px;
+    left: -53px;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: flex;
     align-items: center;
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 1px;
+      background-color: #dddfe0;
+      width: 102%;
+      top: 66%;
+      left: -2px;
+      max-width: 410px;
+
+      @media (min-width: @desktop-width) {
+        top: 59px;
+        left: 2px;
+      }
+    }
+
+    &--1 {
+      padding-bottom: 48px;
+
+      @media (min-width: @desktop-width) {
+        padding-bottom: 24px;
+      }
+    }
+
+    &--2 {
+      padding-bottom: 46px;
+
+      @media (min-width: @desktop-width) {
+        padding-bottom: 20px;
+      }
+    }
+
+    &--3 {
+      padding-bottom: 47px;
+
+      @media (min-width: @desktop-width) {
+        padding-bottom: 48px;
+      }
+    }
+  }
+}
+
+.editor__control {
+  display: block;
+  width: 48px;
+  height: 48px;
+  box-sizing: border-box;
+
+  &--contrast {
+    padding: 7px 0 0 7px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 26px;
+    height: 24px;
+    margin-right: 27px;
+    box-sizing: border-box;
+
+    &--fill {
+      padding-top: 2px;
+    }
+
+    &--contrast {
+      padding-left: 6px;
+      padding-top: 3px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 48px;
+    height: 48px;
+    margin-right: 46px;
+
+    &--contrast {
+      padding-left: 8px;
+      padding-top: 8px;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) and (max-width: 1199px) {
+  .editor__icon-crop {
+    width: 24px;
+    height: 24px;
+  }
+
+  .editor__icon-fill {
+    width: 26px;
+    height: 24px;
+  }
+
+  .editor__icon-contrast {
+    width: 16px;
+    height: 18px;
+  }
+}
+
+.editor__range {
+  display: none;
+  position: absolute;
+  height: 2px;
+  width: 240px;
+  background-color: @black;
+  top: 84px;
+
+  &--crop {
+    left: -16px;
+  }
+
+  &--fill {
+    left: -100px;
+  }
+
+  &--contrast {
+    left: -176px;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    position: relative;
+    width: 75%;
+    max-width: 288px;
+    left: 0;
+    top: 0;
+  }
+}
+
+.editor__range-control {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 2px solid @main-color;
+  border-radius: 50%;
+  background-color: @white;
+  top: -6px;
+
+  &--crop {
+    right: 33px;
+  }
+
+  &--fill {
+    right: 20px;
+  }
+
+  &--contrast {
+    right: 20px;
+  }
+
+  @media (min-width: @tablet-width) {
+    &--crop {
+      right: 42px;
+    }
+
+    &--fill {
+      left: 25px;
+    }
+
+    &--contrast {
+      right: 92px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--crop {
+      left: 71px;
+    }
+
+    &--fill {
+      left: 247px;
+    }
+
+    &--contrast {
+      right: 114px;
+    }
   }
 }
