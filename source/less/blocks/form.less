@@ -6,6 +6,10 @@
   font-size: 18px;
   line-height: 30px;
 
+  @media (min-width: @tablet-width) {
+    max-width: 940px;
+  }
+
   @media (min-width: @desktop-width) {
     width: 940px;
     flex-wrap: wrap;
@@ -183,6 +187,15 @@
   margin-top: 5px;
   width: 84%;
 
+  &:hover {
+    border-color: @black;
+  }
+
+  &:focus {
+    border-color: @main-color;
+    outline: none;
+  }
+
   @media (min-width: @tablet-width) {
     width: auto;
     margin: 0;
@@ -195,10 +208,12 @@
 
   &--contact {
     @media (min-width: @tablet-width) {
-      max-width: 371px;
+      width: 396px;
     }
 
     @media (min-width: @desktop-width) {
+      width: 313px;
+      padding: 19px 17px 20px 17px;
       flex-grow: 0;
       box-sizing: border-box;
     }
@@ -216,7 +231,7 @@
 
   @media (min-width: @desktop-width) {
     width: 936px;
-    padding: 29px 0 11px;
+    padding: 28px 0 11px;
   }
 }
 
@@ -231,17 +246,49 @@
     width: 500px;
     display: flex;
     flex-direction: column-reverse;
+    position: relative;
 
     &:not(:last-child) {
       margin: 0 auto 27px;
     }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 62px;
+      height: 63px;
+      background-color: #e5e5e5;
+      right: 0;
+      top: 1px;
+    }
+
+    &--phone::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: url("../img/icon-phone.svg") no-repeat;
+      top: 22px;
+      right: 22px;
+    }
+
+    &--address::after {
+      content: "";
+      position: absolute;
+      width: 28px;
+      height: 13px;
+      background: url("../img/icon-mail.svg") no-repeat;
+      top: 26px;
+      right: 13px;
+    }
   }
 
   @media (min-width: @desktop-width) {
-    width: 371px;
+    width: 374px;
+    margin: 0;
 
-    &:not(:last-child) {
-      margin: 0 auto;
+    &:first-child {
+      margin: 0 70px 0 59px;
     }
   }
 }
@@ -327,6 +374,14 @@
   top: -6px;
 }
 
+.form__checkbox:hover::before {
+  border: 2px solid #283645;
+}
+
+.form__checkbox:focus::before {
+  border: 2px solid @main-color;
+}
+
 .form__check:checked + .form__checkbox::after {
   content: "";
   position: absolute;
@@ -351,6 +406,14 @@
   border-radius: 50%;
   left: 1px;
   top: -7px;
+}
+
+.form__radio-btn:hover::before {
+  border: 2px solid @black;
+}
+
+.form__radio-btn:focus::before {
+  border: 2px solid @main-color;
 }
 
 .form__radio:checked + .form__radio-btn::after {

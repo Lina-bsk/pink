@@ -110,6 +110,15 @@
   font-weight: 300;
   color: @main-color;
   margin: 0;
+
+  &--mail:hover {
+    color: #283645;
+    text-decoration: underline;
+  }
+
+  &--mail:active {
+    color: rgba(40, 54, 69, 0.4);
+  }
 }
 
 .footer__map {
@@ -172,6 +181,8 @@
     align-items: flex-start;
     padding-top: 36px;
     padding-bottom: 39px;
+    max-width: 940px;
+    margin: 0 auto;
   }
 
   @media (min-width: @desktop-width) {
@@ -181,7 +192,7 @@
     padding-bottom: 70px;
 
     &--form {
-      padding-top: 4px;
+      padding-top: 6px;
     }
   }
 }
@@ -214,4 +225,13 @@
 
 .footer__logo-academy {
   padding-left: 15px;
+  fill: @main-color;
+
+  &:hover {
+    fill: rgb(40, 54, 69);
+  }
+
+  &:active {
+    fill: rgba(40, 54, 69, 0.3);
+  }
 }

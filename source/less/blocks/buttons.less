@@ -20,7 +20,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    z-index: 4;
+    position: relative;
   }
 
   @media (min-width: @desktop-width) {
@@ -42,6 +42,20 @@
   text-transform: uppercase;
   padding: 16px 0;
   border-radius: 3px;
+
+  &:hover {
+    background-color: #1c9b5e;
+  }
+
+  &:active {
+    background-color: #1c9b5e;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+    color: rgba(255, 255, 255, 0.3);
+  }
 
   @media (min-width: @tablet-width) {
     width: 300px;
@@ -89,6 +103,16 @@
   color: rgba(40, 54, 69, 0.1);
   border-color: rgba(40, 54, 69, 0.1);
   padding: 14px 102px 16px 100px;
+
+  &:hover {
+    border-color: #b5b9be;
+  }
+
+  &:active {
+    background-color: #b5b9be;
+    border-color: #b5b9be;
+    color: rgba(255, 255, 255, 0.3);
+  }
 
   @media (min-width: @tablet-width) {
     padding: 14px 98px 16px 84px;

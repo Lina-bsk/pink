@@ -71,11 +71,12 @@
 .post__photo {
   display: block;
 
-  // &--best {
-  //   @media (min-width: @tablet-width) {
-  //     height: 509px;
-  //   }
-  // }
+  &--best {
+    @media (min-width: @tablet-width) {
+      height: 509px;
+      object-fit: cover;
+    }
+  }
 }
 
 .post__wrapper {
@@ -100,6 +101,8 @@
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
+    max-width: 940px;
+    margin: 0 auto;
   }
 
   @media (min-width: @desktop-width) {

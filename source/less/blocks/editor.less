@@ -67,8 +67,19 @@
   }
 }
 
+.editor__icon-crop,
+.editor__icon-fill,
+.editor__icon-contrast {
+  fill: grey;
+
+  @media (min-width: @tablet-width) {
+    fill: @main-color;
+  }
+}
+
 .editor__crop:checked ~ .editor__control .editor__crop-icon,
-.editor__fill:checked ~ .editor__control .editor__fill-icon {
+.editor__fill:checked ~ .editor__control .editor__icon-fill,
+.editor__contrast:checked ~ .editor__control .editor__icon-contrast {
   fill: @main-color;
 }
 
@@ -76,6 +87,12 @@
 .editor__fill:checked ~ .editor__range--fill,
 .editor__contrast:checked ~ .editor__range--contrast {
   display: block;
+}
+
+.editor__icon-crop:hover,
+.editor__icon-fill:hover,
+.editor__icon-contrast {
+  fill: #8d949b;
 }
 
 .editor__tools-wrap {
