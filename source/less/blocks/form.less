@@ -374,12 +374,14 @@
   top: -6px;
 }
 
-.form__checkbox:hover::before {
-  border: 2px solid #283645;
+.form__checkbox:hover::before,
+.form__radio-btn:hover::before {
+  border-color: #283645;
 }
 
-.form__checkbox:focus::before {
-  border: 2px solid @main-color;
+.form__checkbox:active::before,
+.form__radio-btn:active::before {
+  border-color: @main-color;
 }
 
 .form__check:checked + .form__checkbox::after {
