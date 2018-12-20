@@ -10,12 +10,15 @@
 </head>
 
 <body>
+  <div style="display:none">
+    <include src="build/img/sprite.svg"></include>
+  </div>
   <header class="header">
     <div class="header__nav header__nav--opened header__nav--nojs">
       <div class="header__logo">
-        <a class="logo" href="index.html"><svg class="logo__pink logo__s" width="75" height="22"><use xlink:href="img/sprite.svg#logo-s"></use></svg>
-        <svg class="logo__pink logo__m" width="147" height="41"><use xlink:href="img/sprite.svg#logo-m"></use></svg>
-        <svg class="logo__l" width="147" height="41"><use xlink:href="img/sprite.svg#logo-l"></use></svg></a>
+        <a class="logo" href="index.html"><svg class="logo__pink logo__s" width="75" height="22"><use xlink:href="img/sprite.svg#logo-pink-white-mobile"></use></svg>
+        <svg class="logo__pink logo__m" width="147" height="41"><use xlink:href="img/sprite.svg#logo-pink-white-tablet"></use></svg>
+        <svg class="logo__l" width="147" height="41"><use xlink:href="img/sprite.svg#logo-pink-white-desktop"></use></svg></a>
       </div>
       <nav class="main-nav">
         <button class="main-nav__toggle">закрыть</button>
@@ -37,11 +40,11 @@
           <div class="form__name-wrap">
             <div class="form__item-name">
               <label class="form__label form__label--name" for="user-surname">Фамилия:</label>
-              <input class="form__field" id="user-surname" type="text" name="surname" placeholder="Укажите фамилию *" required>
+              <input class="form__field" id="user-surname" type="text" name="surname" placeholder="Укажите фамилию *" required="">
             </div>
             <div class="form__item-name">
               <label class="form__label form__label--name" for="user-name">Имя:</label>
-              <input class="form__field" id="user-name" type="text" name="name" placeholder="Введите ваше имя *" required>
+              <input class="form__field" id="user-name" type="text" name="name" placeholder="Введите ваше имя *" required="">
             </div>
             <div class="form__item-name">
               <label class="form__label form__label--name" for="user-patronymic">Отчество:</label>
@@ -55,11 +58,11 @@
           <legend class="form__label form__label--select">Ваши безбашенные достижения в путешествии</legend>
           <div class="form__check-wrap">
             <div class="form__item-select form__item-select--1">
-              <input class="form__check visually-hidden" type="checkbox" name="selfie-with-shark" id="filter-shark" checked>
+              <input class="form__check visually-hidden" type="checkbox" name="selfie-with-shark" id="filter-shark" checked="">
               <label class="form__checkbox form__select-label" for="filter-shark">Сделал селфи с акулой</label>
             </div>
             <div class="form__item-select form__item-select--4">
-              <input class="form__check visually-hidden" type="checkbox" name="tan" id="filter-tan" checked>
+              <input class="form__check visually-hidden" type="checkbox" name="tan" id="filter-tan" checked="">
               <label class="form__checkbox form__select-label" for="filter-tan">Обгорел на пляже</label>
             </div>
             <div class="form__item-select form__item-select--2">
@@ -71,7 +74,7 @@
               <label class="form__checkbox form__select-label" for="filter-bought-souvenirs">Накупил сувениров</label>
             </div>
             <div class="form__item-select form__item-select--3">
-              <input class="form__check visually-hidden" type="checkbox" name="tower" id="filter-tower" checked>
+              <input class="form__check visually-hidden" type="checkbox" name="tower" id="filter-tower" checked="">
               <label class="form__checkbox form__select-label" for="filter-tower">Удержал башню</label>
             </div>
             <div class="form__item-select form__item-select--6">
@@ -91,7 +94,7 @@
             </div>
             <div class="form__item-info form__item-info--address">
               <label class="form__label" for="user-address">Адрес почты</label>
-              <input class="form__field form__field--contact" id="user-address" type="email" name="address" placeholder="Введите почту *" required>
+              <input class="form__field form__field--contact" id="user-address" type="email" name="address" placeholder="Введите почту *" required="">
             </div>
           </div>
         </fieldset>
@@ -101,7 +104,7 @@
           <legend class="form__label form__label--select">С каким приложением путешествовали?</legend>
           <div class="form__wrap-radio">
             <div class="form__item-radio">
-              <input class="form__radio visually-hidden" type="radio" name="select-app" value="ios" id="filter-ios" checked>
+              <input class="form__radio visually-hidden" type="radio" name="select-app" value="ios" id="filter-ios" checked="">
               <label class="form__radio-btn form__select-label" for="filter-ios">Pink для iOS</label>
             </div>
             <div class="form__item-radio">

@@ -10,13 +10,16 @@
 </head>
 
 <body>
+  <div style="display:none">
+    <include src="build/img/sprite.svg"></include>
+  </div>
   <header class="header">
     <div class="header__nav header__nav--opened header__nav--nojs">
       <div class="header__logo">
         <a class="logo" href="#">
-        <svg class="logo__pink logo__s" width="75" height="22"><use xlink:href="img/sprite.svg#logo-s"></use></svg>
-        <svg class="logo__pink logo__m" width="147" height="41"><use xlink:href="img/sprite.svg#logo-m"></use></svg>
-        <svg class="logo__l" width="147" height="41"><use xlink:href="img/sprite.svg#logo-l"></use></svg>
+        <svg class="logo__pink logo__s" width="75" height="22"><use xlink:href="img/sprite.svg#logo-pink-white-mobile"></use></svg>
+        <svg class="logo__pink logo__m" width="147" height="41"><use xlink:href="img/sprite.svg#logo-pink-white-tablet"></use></svg>
+        <svg class="logo__l" width="147" height="41"><use xlink:href="img/sprite.svg#logo-pink-white-desktop"></use></svg>
       </a>
       </div>
       <nav class="main-nav">
@@ -72,7 +75,7 @@
     </section>
     <section class="reviews">
       <h3 class="visually-hidden">Отзывы о приложении</h3>
-      <input class="visually-hidden reviews__one" id="reviews-1" type="radio" name="slider" checked>
+      <input class="visually-hidden reviews__one" id="reviews-1" type="radio" name="slider" checked="">
       <input class="visually-hidden reviews__two" id="reviews-2" type="radio" name="slider">
       <input class="visually-hidden reviews__three" id="reviews-3" type="radio" name="slider">
       <a class="reviews__arrows reviews__arrows--previous" href="#"><span class="visually-hidden">Назад</span></a>
@@ -101,7 +104,7 @@
     <section class="tariff">
       <h3 class="visually-hidden">Стоимость приложения</h3>
       <input class="visually-hidden tariff__one" id="tariff-1" type="radio" name="toggle">
-      <input class="visually-hidden tariff__two" id="tariff-2" type="radio" name="toggle" checked>
+      <input class="visually-hidden tariff__two" id="tariff-2" type="radio" name="toggle" checked="">
       <input class="visually-hidden tariff__three" id="tariff-3" type="radio" name="toggle">
       <div class="tariff__wrapper">
         <table class="tariff__table">
@@ -161,8 +164,8 @@
     <div class="footer__map"></div>
     <div class="footer__bottom footer__bottom--index">
       <a class="logo-footer" href="index.html">
-      <svg class="logo-footer__pink" width="147" height="41"><use xlink:href="img/sprite.svg#pink-footer"></use></svg>
-      <svg class="logo-footer__stars" width="147" height="41"><use xlink:href="img/sprite.svg#pink-footer-stars"></use></svg>
+      <svg class="logo-footer__pink" width="147" height="41"><use xlink:href="img/sprite.svg#logo-pink-blue-mobile"></use></svg>
+      <svg class="logo-footer__stars" width="147" height="41"><use xlink:href="img/sprite.svg#logo-pink-blue-desktop"></use></svg>
       </a>
       <section class="social">
         <a class="social__link social__link--twitter" href="#"><span class="visually-hidden">Мы в Твитере</span></a>
