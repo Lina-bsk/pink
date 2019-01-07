@@ -34,6 +34,19 @@
   }
 }
 
+.logo__pink {
+  fill: @white;
+
+  &:hover {
+    fill: @main-color;
+  }
+
+  &:active {
+    fill: @white;
+    opacity: 0.3;
+  }
+}
+
 .logo-footer {
   width: 147px;
   height: 41px;
@@ -44,25 +57,24 @@
 
   @media (min-width: @desktop-width) {
     display: block;
+    fill: #283645;
   }
 }
 
 .logo-footer__pink {
+  fill: #283645;
+
   @media (min-width: @desktop-width) {
     display: none;
   }
 }
 
-.logo__pink:hover {
-  fill: @main-color;
+.logo-footer__pink:active,
+.logo-footer__stars:active {
+  opacity: 0.3;
 }
 
-// .logo__pink {
-//   &:hover {
-//     fill: @main-color;
-//   }
-
-//   &:active {
-//     fill: rgba(255, 255, 255, 0.3);
-//   }
-// }
+.logo-footer__pink:hover,
+.logo-footer__stars:hover {
+  fill: @main-color;
+}
