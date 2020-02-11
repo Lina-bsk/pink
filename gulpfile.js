@@ -15,7 +15,6 @@ var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var del = require("del");
 var htmlmin = require("gulp-htmlmin");
-var uglify = require('gulp-uglify');
 var pump = require("pump");
 
 gulp.task("css", function () {
@@ -64,16 +63,6 @@ gulp.task("webp", function () {
   .pipe(gulp.dest("source/img/"));
 });
 
-gulp.task("compress", function (cb) {
-  pump([
-    gulp.src("source/js/*.js"),
-    uglify(),
-    gulp.dest("build/js")
-  ],
-  cb
-  );
-});
-
 gulp.task("clean", function () {
   return del("build");
 });
@@ -96,7 +85,7 @@ gulp.task("server", function () {
 
   gulp.watch("source/less/**/*.less", gulp.series("css"));
   gulp.watch("source/img/logo-pink-*.svg", gulp.series("sprite", "html", "refresh"));
-  gulp.watch("source/js/*.js", gulp.series("compress", "refresh"));
+  gulp.watch("source/js/*.js", gulp.series("refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
 });
 
