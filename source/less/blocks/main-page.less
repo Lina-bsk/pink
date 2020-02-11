@@ -1,18 +1,56 @@
 .main__text {
   line-height: 30px;
   margin: 0 auto;
-  padding: 46px 6% 31px;
   text-align: center;
+  max-width: 580px;
+
+  &--form {
+    padding: 46px 20px 33px 20px;
+  }
+
+  &--photo {
+    padding: 45px 11% 49px;
+  }
+
+  &--photo-bottom {
+    padding: 21px 0 42px;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 18px;
-    padding: 92px 50px 72px;
-    max-width: 800px;
+
+    &--form {
+      padding: 92px 50px 72px;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    &--photo {
+      padding: 92px 11% 76px;
+    }
+
+    &--photo-bottom {
+      padding: 45px 0 69px;
+    }
   }
 
   @media (min-width: @desktop-width) {
-    padding-bottom: 65px;
+    &--form {
+      padding-bottom: 65px;
+    }
+
+    &--photo {
+      padding-bottom: 88px;
+    }
+
+    &--photo-bottom {
+      padding: 4px 0 66px;
+    }
   }
+}
+
+.main__text-item {
+  display: block;
 }
 
 .main__text-add {
@@ -25,6 +63,6 @@
 
 .main--photo {
   @media (min-width: @desktop-width) {
-    padding: 0 130px;
+    margin: 0 auto;
   }
 }

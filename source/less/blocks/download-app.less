@@ -1,27 +1,73 @@
-.download-app {
-  color: @white;
-  max-width: 300px;
+.download-app-wrapper {
+  background-color: @top-color;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    background-color: transparent;
+  }
 
   @media (min-width: @desktop-width) {
     width: 940px;
+    margin: 0 auto;
   }
 }
 
-.download-app__wrapper {
-  padding: 380px 0 0 0;
-
+.download-app {
+  color: @white;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 28px 20px 15px;
 
   @media (min-width: @tablet-width) {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    padding-top: 101px;
-    z-index: 3;
+    padding-right: 340px;
+    position: relative;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 118px;
-    align-items: center;
+    padding: 42px 640px 0 0;
+    margin: 0 0;
+  }
+}
+
+.download-app::before {
+  content: "";
+
+  position: absolute;
+  width: 320px;
+  height: 286px;
+  top: -286px;
+  right: 0;
+  background: url("../img/iphone-hand-mobile@1x.png") no-repeat;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/iphone-hand-mobile@2x.png");
+    background-size: 258px auto;
+  }
+
+  @media (min-width: @tablet-width) {
+    background: url("../img/iphone-hand-tablet@1x.png") no-repeat;
+    width: 656px;
+    height: 547px;
+    right: 24px;
+    top: 9px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/iphone-hand-tablet@2x.png");
+      background-size: 700px auto;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    background: url("../img/iphone-hand-desktop@1x.png") no-repeat;
+    width: 880px;
+    height: 645px;
+    left: 16px;
+    top: 34px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/iphone-hand-desktop@2x.png");
+      background-size: 1050px auto;
+    }
   }
 }
 
@@ -34,7 +80,11 @@
   @media (min-width: @tablet-width) {
     text-align: center;
     font-size: 18px;
-    z-index: 3;
+    position: relative;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
   }
 }
 
@@ -46,15 +96,14 @@
     font-size: 40px;
     line-height: 48px;
     font-weight: 300;
-    padding: 0 45px 0 45px;
-    margin: 0 0 31px;
+    margin: 0 45px 31px;
     text-align: center;
   }
 
   @media (min-width: @desktop-width) {
     font-size: 50px;
     line-height: 60px;
-    margin-bottom: 52px;
+    margin: 0 0 52px;
   }
 }
 

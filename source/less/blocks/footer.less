@@ -110,18 +110,32 @@
   font-weight: 300;
   color: @main-color;
   margin: 0;
+
+  &--mail:hover {
+    color: #283645;
+    text-decoration: underline;
+  }
+
+  &--mail:active {
+    color: rgba(40, 54, 69, 0.4);
+  }
 }
 
 .footer__map {
   min-height: 200px;
-  background: url("../../img/bg-map-mobile@1x.png") no-repeat bottom;
+  background: url("../img/bg-map-mobile@1x.png") no-repeat bottom;
   background-size: cover;
   position: relative;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/bg-map-mobile@2x.jpg");
+    background-size: 100% auto;
+  }
 
   &::before {
     content: "";
     position: absolute;
-    background: url("../../img/bg-triangle-white-footer.svg") no-repeat top center;
+    background: url("../img/bg-triangle-white-footer.svg") no-repeat top center;
     min-height: 70px;
     width: 100%;
     background-size: contain;
@@ -135,14 +149,24 @@
 
   @media (min-width: @tablet-width) {
     min-height: 374px;
-    background: url("../../img/bg-map-tablet@1x.jpg") no-repeat bottom;
+    background: url("../img/bg-map-tablet@1x.jpg") no-repeat bottom;
     background-size: cover;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-map-tablet@2x.jpg");
+      background-size: 100% auto;
+    }
   }
 
   @media (min-width: @desktop-width) {
     min-height: 505px;
-    background: url("../../img/bg-map-desktop@1x.jpg") no-repeat bottom;
+    background: url("../img/bg-map-desktop@1x.jpg") no-repeat bottom;
     background-size: cover;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-map-desktop@2x.jpg");
+      background-size: 100% auto;
+    }
   }
 }
 
@@ -157,6 +181,8 @@
     align-items: flex-start;
     padding-top: 36px;
     padding-bottom: 39px;
+    max-width: 940px;
+    margin: 0 auto;
   }
 
   @media (min-width: @desktop-width) {
@@ -166,7 +192,7 @@
     padding-bottom: 70px;
 
     &--form {
-      padding-top: 4px;
+      padding-top: 6px;
     }
   }
 }
@@ -199,4 +225,13 @@
 
 .footer__logo-academy {
   padding-left: 15px;
+  fill: @main-color;
+
+  &:hover {
+    fill: rgb(40, 54, 69);
+  }
+
+  &:active {
+    fill: rgba(40, 54, 69, 0.3);
+  }
 }

@@ -20,7 +20,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    z-index: 4;
+    position: relative;
   }
 
   @media (min-width: @desktop-width) {
@@ -42,6 +42,21 @@
   text-transform: uppercase;
   padding: 16px 0;
   border-radius: 3px;
+  border: 0;
+
+  &:hover {
+    background-color: #1c9b5e;
+  }
+
+  &:active {
+    background-color: #1c9b5e;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+    color: rgba(255, 255, 255, 0.3);
+  }
 
   @media (min-width: @tablet-width) {
     width: 300px;
@@ -55,13 +70,15 @@
   border: 3px solid;
   background-color: rgba(255, 255, 255, 0);
   border-radius: 30px;
+  display: block;
+  margin: 0 auto;
 }
 
 .editor-btn--submit {
   border-color: @main-color;
   color: @main-color;
-  padding: 16px 86px;
-  margin-bottom: 20px;
+  padding: 13px 88px 16px 86px;
+  margin-bottom: 13px;
 
   &:hover {
     background-color: @main-color;
@@ -71,10 +88,39 @@
   &:active {
     color: rgba(255, 255, 255, 0.3);
   }
+
+  @media (min-width: @tablet-width) {
+    padding: 14px 83px 16px 72px;
+    margin-bottom: 23px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 45px 0 9px;
+    padding: 12px 34px 16px 44px;
+  }
 }
 
 .editor-btn--reset {
   color: rgba(40, 54, 69, 0.1);
   border-color: rgba(40, 54, 69, 0.1);
-  padding: 16px 100px;
+  padding: 14px 102px 16px 100px;
+
+  &:hover {
+    border-color: #b5b9be;
+  }
+
+  &:active {
+    background-color: #b5b9be;
+    border-color: #b5b9be;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 14px 98px 16px 84px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 12px 49px 16px 54px;
+    margin: 0;
+  }
 }
